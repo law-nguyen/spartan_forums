@@ -7,7 +7,9 @@ import {
   FormControl,
   Button,
   Image,
-  Badge
+  Badge,
+  Row,
+  Col
 } from "react-bootstrap";
 class HomePage extends Component {
   state = {};
@@ -29,7 +31,7 @@ class HomePage extends Component {
               <Nav.Link href="#inbox">
                 <Image src="./img/mail.jpg" width="30" height="32" />
                 <Badge pill variant="danger" class="lower-right">
-                  2{/* put in lower right */}
+                  2{/* put in lower right  and resize*/}
                 </Badge>
               </Nav.Link>
             </Nav>
@@ -43,6 +45,17 @@ class HomePage extends Component {
             </Form>
           </Navbar.Collapse>
         </Navbar>
+        <div>
+          <Row>
+            <Col xs lg="2">
+              Directories you follow
+            </Col>
+            <Col md="auto">indent</Col>
+            <Col xl lg="2">
+              Posts
+            </Col>
+          </Row>
+        </div>
       </div>
     );
   }
