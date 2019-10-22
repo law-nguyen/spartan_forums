@@ -1,5 +1,13 @@
-.lower-right{
-    position: absolute;
-    bottom:0;
-    right:0;
+.icon-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.body {
+  text-indent: 10%;
+}
+
+.side-bar {
+  border: 2px #000;
 }

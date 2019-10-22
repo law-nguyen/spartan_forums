@@ -30,7 +30,7 @@ class HomePage extends Component {
               </Nav.Link>
               <Nav.Link href="#inbox">
                 <Image src="./img/mail.jpg" width="30" height="32" />
-                <Badge pill variant="danger" class="lower-right">
+                <Badge pill variant="danger" class="icon-badge">
                   2{/* put in lower right  and resize*/}
                 </Badge>
               </Nav.Link>
@@ -45,10 +45,16 @@ class HomePage extends Component {
             </Form>
           </Navbar.Collapse>
         </Navbar>
-        <div>
+        <div class="body">
           <Row>
-            <Col xs lg="2">
+            <Col xs lg="2" class="side-bar">
+              {/* make this inside a light blue box or smthn */}
               Directories you follow
+              <Nav defaultActiveKey="/home" className="flex-column">
+                <Nav.Link href="#CMPE">#CMPE</Nav.Link>
+                <Nav.Link href="#cooking">#cooking</Nav.Link>
+                <Nav.Link href="#music">#music</Nav.Link>
+              </Nav>
             </Col>
             <Col md="auto">indent</Col>
             <Col xl lg="2">
