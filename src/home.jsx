@@ -29,7 +29,7 @@ class HomePage extends Component {
               <Nav.Link href="#inbox">
                 <Image src="./img/mail.jpg" width="30" height="32" />
                 <Badge pill variant="danger" class="lower-right">
-                  2
+                  2{/* put in lower right */}
                 </Badge>
               </Nav.Link>
             </Nav>
