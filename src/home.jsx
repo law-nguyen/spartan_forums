@@ -58,7 +58,7 @@ class HomePage extends Component {
             </Col>
             <Col md="auto">indent</Col>
             <Col xl lg="2">
-              Posts
+            <a href="/add-post">Add Post</a>
             </Col>
           </Row>
         </div>
