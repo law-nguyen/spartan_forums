@@ -16,9 +16,6 @@ import {
 class HomePage extends Component {
   state = {};
   render() {
-
-
-
     return (
       <div>
         <Navbar bg="light" expand="lg">
