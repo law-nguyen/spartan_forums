@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Routes from './routes';
-import { browserHistory } from 'react-router';
+import Routes from "./routes";
+import { browserHistory } from "react-router";
 import "./main.css";
 import {
   Navbar,
@@ -11,14 +11,12 @@ import {
   Image,
   Badge,
   Row,
-  Col
+  Col,
+  Container
 } from "react-bootstrap";
 class HomePage extends Component {
   state = {};
   render() {
-
-
-
     return (
       <div>
         <Navbar bg="light" expand="lg">
@@ -30,8 +28,7 @@ class HomePage extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">
-              </Nav.Link>
+              <Nav.Link href="#home"></Nav.Link>
 
               <Nav.Link href="/add-post">
                 <Image src="./img/new_post.png" width="30" height="30" />
@@ -39,11 +36,10 @@ class HomePage extends Component {
 
               <Nav.Link href="#inbox">
                 <Image src="./img/mail.jpg" width="30" height="32" />
-                <Badge pill variant="danger" class="icon-badge">
+                <Badge pill variant="danger" class="iconBadge">
                   2{/* put in lower right  and resize */}
                 </Badge>
               </Nav.Link>
-
             </Nav>
             <Form inline>
               <FormControl
@@ -57,21 +53,21 @@ class HomePage extends Component {
         </Navbar>
         <div class="body">
           <Row>
-            <Col xs lg="2" class="side-bar">
-              {/* make this inside a light blue box or smthn */}
-              Directories you follow
-              <Nav defaultActiveKey="/home" className="flex-column">
-                <Nav.Link href="#CMPE">#CMPE</Nav.Link>
-                <Nav.Link href="#cooking">#cooking</Nav.Link>
-                <Nav.Link href="#music">#music</Nav.Link>
-              </Nav>
+            <Col xs lg="2">
+              <Container class="sideBar">
+                {/* make this inside a light blue box or smthn */}
+                Directories you follow
+                <Nav defaultActiveKey="/home" className="flex-column">
+                  <Nav.Link href="#CMPE">#CMPE</Nav.Link>
+                  <Nav.Link href="#cooking">#cooking</Nav.Link>
+                  <Nav.Link href="#music">#music</Nav.Link>
+                </Nav>
+              </Container>
             </Col>
-            <Col md="auto">indent</Col>
+            <Col md="auto"></Col>
             <Col xl lg="2">
-
-             {/* This adds the post page into the right column */}
-            <Routes history={browserHistory} />
-            
+              {/* This adds the post page into the right column */}
+              <Routes history={browserHistory} />
             </Col>
           </Row>
         </div>

@@ -1,4 +1,4 @@
-.icon-badge {
+.iconBadge {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -8,6 +8,8 @@
   text-indent: 10%;
 }
 
-.side-bar {
-  border: 2px #000;
+.sideBar {
+  outline-style: single;
+  outline-color: lightseagreen;
+  background-color: lightskyblue;
 }
