@@ -39,8 +39,8 @@ class Posts extends Component {
 
     return (
       <div className="Posts">
-      {/*When user clicks on add post button, redirect them to add post subsite*/}
-        <a href="/add-post">Add Post</a>
+      {/*When user clicks on add post button, redirect them to add post subsite */}
+        {/* <a href="/add-post">Add Post</a>  */}
         { Object.keys(posts).map(function(key) {
             return (
               <div key={key}>
@@ -55,6 +55,8 @@ class Posts extends Component {
             );
         })}
       </div>
+
+        
     );
   }
 }

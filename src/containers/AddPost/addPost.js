@@ -38,7 +38,7 @@ class AddPost extends Component {
         <input type="text" placeholder="Write title of post" onChange={ this.handleChange } value={ this.state.title }/>
         <button type="submit" onClick={this.handleSubmit}>Submit</button>
          {/*When user clicks on back to post button, redirect them to home site*/}
-        <a href="/">Back to posts</a>
+        <a href="/posts">Back to posts</a>
       </div>
     );
   }
