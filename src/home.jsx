@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import App from './containers/App/database';
-import Posts from './containers/Posts/postPage';
-import AddPost from './containers/AddPost/addPost';
-import { Link } from 'react-router';
-
 import Routes from './routes';
-
+import { browserHistory } from 'react-router';
 import "./main.css";
 import {
   Navbar,
@@ -28,7 +23,7 @@ class HomePage extends Component {
       <div>
         <Navbar bg="light" expand="lg">
           {/* If Logo on top left is clicked, redirect to home page */}
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="/posts">
             <Image src="./img/icon.jpg" width="50" height="50" />
           </Navbar.Brand>
           <Navbar.Brand href="#home">Spartan Forums</Navbar.Brand>
@@ -38,12 +33,9 @@ class HomePage extends Component {
               <Nav.Link href="#home">
               </Nav.Link>
 
-
-
               <Nav.Link href="/add-post">
                 <Image src="./img/new_post.png" width="30" height="30" />
               </Nav.Link>
-
 
               <Nav.Link href="#inbox">
                 <Image src="./img/mail.jpg" width="30" height="32" />
@@ -51,7 +43,6 @@ class HomePage extends Component {
                   2{/* put in lower right  and resize */}
                 </Badge>
               </Nav.Link>
-
 
             </Nav>
             <Form inline>
@@ -77,6 +68,10 @@ class HomePage extends Component {
             </Col>
             <Col md="auto">indent</Col>
             <Col xl lg="2">
+
+             {/* This adds the post page into the right column */}
+            <Routes history={browserHistory} />
+            
             </Col>
           </Row>
         </div>
