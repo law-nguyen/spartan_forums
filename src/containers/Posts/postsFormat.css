@@ -1,0 +1,20 @@
+.post {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  width: 60%;
+}
+
+.body {
+  margin-top: 20px;
+}
+
+.postHeader {
+}
+
+.postBody {
+  margin: 10px;
+}
+
+.postFooter {
+}
