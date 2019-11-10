@@ -95,10 +95,19 @@ class Post extends Component {
                     <Form.Group controlId="exampleForm.ControlTextarea1">
                       <Form.Label>Leave A Comment</Form.Label>
                       <Form.Control as="textarea" rows="3" />
-                      <button className="ml-30">submit</button>
+                      <button>submit</button>
                     </Form.Group>
                   </div>
                 </Container>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs lg="2"></Col>
+            <Col md="auto"></Col>
+            <Col xl lg="2">
+              <div class="post">
+                <Container>Comments go here</Container>
               </div>
             </Col>
           </Row>

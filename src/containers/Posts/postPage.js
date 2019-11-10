@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 
-import "./main.css";
+import "./postsFormat.css";
 
 class Posts extends Component {
   handleUpvote = (post, key) => {
