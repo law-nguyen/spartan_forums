@@ -5,7 +5,6 @@ import App from "./containers/App/database";
 import Posts from "./containers/Posts/postPage";
 import AddPost from "./containers/AddPost/addPost";
 import SignIn from "./containers/SignIn/signIn";
-import PostPageWithComments from "./containers/PostPageWithComments/postPage";
 
 const Routes = props => (
   <Router {...props}>
@@ -13,7 +12,6 @@ const Routes = props => (
       <Route path="/posts" component={Posts} />
       <Route path="/add-post" component={AddPost} />
       <Route path="/signIn" component={SignIn} />
-      <Route path="/postPage" component={PostPageWithComments} />
     </Route>
   </Router>
 );
