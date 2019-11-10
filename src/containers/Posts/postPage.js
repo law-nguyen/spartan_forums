@@ -45,6 +45,7 @@ class Posts extends Component {
             <div key={key} class="post">
               <div>Title: {posts[key].title}</div>
               <div>Votes: {posts[key].upvote}</div>
+
               <div>
                 <Button
                   className="m-2"
