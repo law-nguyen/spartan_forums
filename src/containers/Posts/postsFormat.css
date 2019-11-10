@@ -9,12 +9,11 @@
   margin-top: 20px;
 }
 
-.postHeader {
-}
-
 .postBody {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .postFooter {
+  margin-bottom: 10px;
 }
