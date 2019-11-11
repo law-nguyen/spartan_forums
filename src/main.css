@@ -1,0 +1,15 @@
+.iconBadge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.body {
+  text-indent: 10%;
+}
+
+.sideBar {
+  outline-style: single;
+  outline-color: lightseagreen;
+  background-color: lightskyblue;
+}
