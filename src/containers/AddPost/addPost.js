@@ -9,7 +9,8 @@ class AddPost extends Component {
   }
 
   state = {
-    title: ""
+    title: "",
+    body: ""
   };
 
   handleChange = e => {
@@ -18,17 +19,25 @@ class AddPost extends Component {
     });
   };
 
+  handleBody = p => {
+    this.setState({
+      body: p.target.value
+    });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
 
     this.props.firebase.ref("posts").push({
       title: this.state.title,
+      body: this.state.body,
       upvote: 0,
       downvote: 0
     });
 
     this.setState({
-      title: ""
+      title: "",
+      body: ""
     });
   };
 
@@ -41,6 +50,14 @@ class AddPost extends Component {
           onChange={this.handleChange}
           value={this.state.title}
         />
+
+        <input
+          type="ContentOfPost"
+          placeholder="What do you want to say?"
+          onChange={this.handleBody}
+          value={this.state.body}
+        />
+
         <button type="submit" onClick={this.handleSubmit}>
           Submit
         </button>
