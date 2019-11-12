@@ -12,7 +12,6 @@ import Post from "./containers/Posts/individualPost";
 ReactDOM.render(
   <div>
     <HomePage />
-    <Post />
   </div>,
   document.getElementById("root")
 );

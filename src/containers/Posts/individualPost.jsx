@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import {
   Navbar,
   Nav,
@@ -12,11 +13,40 @@ import {
   Container
 } from "react-bootstrap";
 import "./postsFormat.css";
+
 class Post extends Component {
+  constructor() {
+    super();
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
   state = {
     //title, body, author, date posted, category, likes, comments
+    comment: ""
   };
+
+  handleChange = e => {
+    this.setState({
+      comment: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    this.props.firebase.ref("postswithcomments").push({
+      comment: this.state.comment
+    });
+
+    this.setState({
+      comment: ""
+    });
+  };
+
   render() {
+    let postswithcomments = this.props.comment;
     return (
       <div>
         <Navbar bg="light" expand="lg">
@@ -73,19 +103,9 @@ class Post extends Component {
                         <Col>Date Posted:</Col>
                       </Row>
                     </Col>
-                    <Col></Col>
-                    <Col> Category</Col>
+                    <Col></Col>T<Col> Category: School</Col>
                   </Row>
-                  <div class="postBody">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum."
-                  </div>
+                  <div class="postBody">Content of posts goes here</div>
                   <div class="postFooter">
                     <button className="mr-3">Like</button>
                     <button className="mr-3">Save</button>
@@ -93,9 +113,18 @@ class Post extends Component {
                   </div>
                   <div class="postFooter">
                     <Form.Group controlId="exampleForm.ControlTextarea1">
-                      <Form.Label>Leave A Comment</Form.Label>
-                      <Form.Control as="textarea" rows="3" />
-                      <button className="ml-30">submit</button>
+                      {/* <Form.Label>Leave A Comment</Form.Label> */}
+                      <Form.Control
+                        as="textarea"
+                        rows="3"
+                        type="text"
+                        placeholder="Leave A Comment"
+                        onChange={this.handleChange}
+                        value={this.state.comment}
+                      />
+                      <button type="submit" onClick={this.handleSubmit}>
+                        Submit
+                      </button>
                     </Form.Group>
                   </div>
                 </Container>

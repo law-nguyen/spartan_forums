@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as firebase from "firebase";
+import firebase from "firebase";
 import config from "./firebase-config";
 
 class App extends Component {
@@ -17,12 +17,20 @@ class App extends Component {
 
   componentWillMount() {
     let postsRef = firebase.database().ref("posts");
+    let commentsRef = firebase.database().ref("postswithcomments");
 
     let _this = this;
 
     postsRef.on("value", function(snapshot) {
       _this.setState({
         posts: snapshot.val(),
+        loading: false
+      });
+    });
+
+    commentsRef.on("value", function(snapshot) {
+      _this.setState({
+        postswithcomments: snapshot.val(),
         loading: false
       });
     });
@@ -35,6 +43,7 @@ class App extends Component {
           React.cloneElement(this.props.children, {
             firebase: firebase.database(),
             posts: this.state.posts,
+            postswithcomments: this.state.postswithcomments,
             loading: this.state.loading
           })}
       </div>
