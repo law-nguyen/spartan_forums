@@ -125,9 +125,21 @@ class Post extends Component {
                       <button type="submit" onClick={this.handleSubmit}>
                         Submit
                       </button>
+                      <Form.Label>Leave A Comment</Form.Label>
+                      <Form.Control as="textarea" rows="3" />
+                      <button>submit</button>
                     </Form.Group>
                   </div>
                 </Container>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs lg="2"></Col>
+            <Col md="auto"></Col>
+            <Col xl lg="2">
+              <div class="post">
+                <Container>Comments go here</Container>
               </div>
             </Col>
           </Row>
