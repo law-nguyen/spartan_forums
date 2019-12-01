@@ -63,8 +63,8 @@ class ProfilePage extends Component {
                   />
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Settings </Dropdown.Item>
+                  <Dropdown.Item href="/profile">Profile</Dropdown.Item>
+                  <Dropdown.Item href="/settings">Settings </Dropdown.Item>
                   <Dropdown.Divider />
                   <Dropdown.Item href="#/action-3">
                     <p class="text-danger">Sign Out</p>
