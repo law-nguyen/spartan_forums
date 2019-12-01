@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./postsFormat.css";
+import Post from "./individualPost";
 
 class Posts extends Component {
   handleUpvote = (post, key) => {
@@ -42,15 +45,20 @@ class Posts extends Component {
 
     return (
       <div>
-        {/*When user clicks on add post Button, redirect them to add post subsite */}
-        {/* <a href="/add-post">Add Post</a>  */}
         {Object.keys(posts).map(function(key) {
           return (
             <div key={key} class="post">
-              <div>Title: {posts[key].title}</div>
-              <div>Votes: {posts[key].upvote}</div>
+              <h2>
+                <BrowserRouter>
+                  {/* When clicked on a post, link them to that specific post */}
+                  <Link to={`/view/posts/${key}`}>
+                    Title: {posts[key].title}
+                  </Link>
+                </BrowserRouter>
+              </h2>
 
-              <div>Body: {posts[key].body}</div>
+              <div>Votes: {posts[key].upvote}</div>
+              {/* <div>Body: {posts[key].body}</div> */}
 
               <div>
                 <Button

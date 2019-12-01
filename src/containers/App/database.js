@@ -16,7 +16,7 @@ class App extends Component {
   };
 
   componentWillMount() {
-    let postsRef = firebase.database().ref("posts");
+    let postsRef = firebase.database().ref("/posts");
     let commentsRef = firebase.database().ref("postswithcomments");
 
     let _this = this;
