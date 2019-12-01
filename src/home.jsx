@@ -12,7 +12,8 @@ import {
   Badge,
   Row,
   Col,
-  Container
+  Container,
+  Dropdown
 } from "react-bootstrap";
 class HomePage extends Component {
   state = {};
@@ -49,6 +50,28 @@ class HomePage extends Component {
               />
               <Button variant="outline-success">Search</Button>
             </Form>
+
+            {/* Adds the profile icon top right */}
+            <div class="">
+              <Dropdown alignRight>
+                <Dropdown.Toggle variant="light">
+                  <Image
+                    src="./img/b man.png"
+                    width="30"
+                    height="30"
+                    thumbnail
+                  />
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="/profile">Profile</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Settings </Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item href="#/action-3">
+                    <p class="text-danger">Sign Out</p>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
           </Navbar.Collapse>
         </Navbar>
         <div class="body">

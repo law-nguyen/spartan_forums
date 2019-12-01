@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import "./postsFormat.css";
 
 import {
   Navbar,
   Nav,
   Form,
   FormControl,
-  Button,
   Image,
   Badge,
   Row,
@@ -17,9 +21,6 @@ import "./postsFormat.css";
 class Post extends Component {
   constructor() {
     super();
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   state = {
@@ -27,123 +28,92 @@ class Post extends Component {
     comment: ""
   };
 
-  handleChange = e => {
-    this.setState({
-      comment: e.target.value
-    });
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
-
-    this.props.firebase.ref("postswithcomments").push({
-      comment: this.state.comment
-    });
-
-    this.setState({
-      comment: ""
-    });
-  };
-
   render() {
-    let postswithcomments = this.props.comment;
+    let posts = this.props.posts;
+
+    if (!posts) {
+      return false;
+    }
+
+    if (this.props.loading) {
+      return <div>Loading</div>;
+    }
+
     return (
       <div>
-        <Navbar bg="light" expand="lg">
-          {/* If Logo on top left is clicked, redirect to home page */}
-          <Navbar.Brand href="/posts">
-            <Image src="./img/icon.jpg" width="50" height="50" />
-          </Navbar.Brand>
-          <Navbar.Brand href="#home">Spartan Forums</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home"></Nav.Link>
+        {Object.keys(posts).map(function(key) {
+          return (
+            <div key={key} class="post">
+              <div class="body">
+                <Row>
+                  <Col xs lg="2">
+                    <Container>
+                      <Button variant="light">Back</Button>
+                    </Container>
+                  </Col>
+                  <Col md="auto"></Col>
+                  <Col xl lg="2">
+                    <div class="post">
+                      <Container>
+                        <Row>
+                          <Col>
+                            <h1>
+                              {/*   
+                                  This is where the title data does to the post 
+                              */}
+                              {posts[key].title}
+                            </h1>
+                            <Row>
+                              <Col>Posted by:</Col>
+                            </Row>
+                            <Row>
+                              <Col>Date Posted:</Col>
+                            </Row>
+                          </Col>
+                          <Col></Col>
+                          <Col> Category: School</Col>
+                        </Row>
+                        <div class="postBody">
+                          {/*      
+                              This is where the body data goes to the post page
+                          */}
+                          {posts[key].body}
+                        </div>
+                        <div class="postFooter">
+                          <button className="mr-3">Like</button>
+                          <button className="mr-3">Save</button>
+                          <button className="mr-3">Share</button>
+                        </div>
+                        <div class="postFooter">
+                          <Form.Group controlId="exampleForm.ControlTextarea1">
+                            {/* <Form.Label>Leave A Comment</Form.Label> */}
+                            <Form.Control
+                              as="textarea"
+                              rows="3"
+                              type="text"
+                              placeholder="Leave A Comment"
+                              /* <Form.Label>Leave A Comment</Form.Label> 
 
-              <Nav.Link href="/add-post">
-                <Image src="./img/new_post.png" width="30" height="30" />
-              </Nav.Link>
+                                  This is the submit button. When you press it, it pushes to database (FIX LATER)
+                                     onChange={this.handleChange}
+                                     value={this.state.comment}
+                              */
+                            />
 
-              <Nav.Link href="#inbox">
-                <Image src="./img/mail.jpg" width="30" height="32" />
-                <Badge pill variant="danger" class="iconBadge">
-                  2{/* put in lower right  and resize */}
-                </Badge>
-              </Nav.Link>
-            </Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-          </Navbar.Collapse>
-        </Navbar>
-
-        <div class="body">
-          <Row>
-            <Col xs lg="2">
-              <Container>
-                <Button variant="light">Back</Button>
-              </Container>
-            </Col>
-            <Col md="auto"></Col>
-            <Col xl lg="2">
-              <div class="post">
-                <Container>
-                  <Row>
-                    <Col>
-                      <h1>title</h1>
-                      <Row>
-                        <Col>Posted by:</Col>
-                      </Row>
-                      <Row>
-                        <Col>Date Posted:</Col>
-                      </Row>
-                    </Col>
-                    <Col></Col>T<Col> Category: School</Col>
-                  </Row>
-                  <div class="postBody">Content of posts goes here</div>
-                  <div class="postFooter">
-                    <button className="mr-3">Like</button>
-                    <button className="mr-3">Save</button>
-                    <button className="mr-3">Share</button>
-                  </div>
-                  <div class="postFooter">
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                      {/* <Form.Label>Leave A Comment</Form.Label> */}
-                      <Form.Control
-                        as="textarea"
-                        rows="3"
-                        type="text"
-                        placeholder="Leave A Comment"
-                        onChange={this.handleChange}
-                        value={this.state.comment}
-                      />
-                      <button type="submit" onClick={this.handleSubmit}>
-                        Submit
-                      </button>
-                      <Form.Label>Leave A Comment</Form.Label>
-                      <Form.Control as="textarea" rows="3" />
-                      <button>submit</button>
-                    </Form.Group>
-                  </div>
-                </Container>
+                            {/*     
+                                Put onClick={this.handleSubmit} after the "submit" later
+                           */}
+                            <button type="submit">Submit</button>
+                          </Form.Group>
+                        </div>
+                      </Container>
+                    </div>
+                  </Col>
+                </Row>
               </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs lg="2"></Col>
-            <Col md="auto"></Col>
-            <Col xl lg="2">
-              <div class="post">
-                <Container>Comments go here</Container>
-              </div>
-            </Col>
-          </Row>
-        </div>
+            </div>
+          );
+        })}
       </div>
     );
   }

@@ -6,6 +6,7 @@ import HomePage from "./home";
 import ProfilePage from "./profile";
 import SignIn from "./containers/SignIn/signIn";
 import Post from "./containers/Posts/individualPost";
+import ProfilePage from "./profile";
 
 //ReactDOM.render(<Routes history={browserHistory} />, document.getElementById('root'));
 //ReactDOM.render(<HomePage/>, document.getElementById('root'));
