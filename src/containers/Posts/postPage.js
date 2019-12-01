@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 
-import "./main.css";
+import "./postsFormat.css";
 
 class Posts extends Component {
   handleUpvote = (post, key) => {
@@ -24,6 +24,10 @@ class Posts extends Component {
     this.props.firebase.ref("posts/" + key).remove();
   };
 
+  //handleTransferToPost = (post, key) => {
+  //this.props.firebase.ref("posts/" + key).set;
+  //};
+
   render() {
     let posts = this.props.posts;
     let _this = this;
@@ -45,6 +49,9 @@ class Posts extends Component {
             <div key={key} class="post">
               <div>Title: {posts[key].title}</div>
               <div>Votes: {posts[key].upvote}</div>
+
+              <div>Body: {posts[key].body}</div>
+
               <div>
                 <Button
                   className="m-2"
