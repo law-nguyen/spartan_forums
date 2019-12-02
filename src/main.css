@@ -13,3 +13,58 @@
   outline-color: lightseagreen;
   background-color: lightskyblue;
 }
+
+.yellow-square {
+  background-color: #ffdc00;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.top-padding {
+  height: 10px;
+}
+
+.profile-card {
+  border: 1px solid grey;
+  margin: 20px;
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+.profile-buttons-padding {
+  margin-bottom: 10px;
+}
+
+.image-padding {
+  height: 3px;
+}
+
+.mt-n1 {
+  margin-top: -0.25rem !important;
+}
+
+.dropdown {
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.icon-login-square {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.box {
+  border: 1px solid black;
+}

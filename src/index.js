@@ -6,13 +6,23 @@ import HomePage from "./home";
 import SignIn from "./containers/SignIn/signIn";
 import Post from "./containers/Posts/individualPost";
 import ProfilePage from "./profile";
+import LoginPage from "./loginPage";
+import SampleLogin from "./sample";
+import App from "./CreateAccount";
+import WelcomePage from "./Welcome";
+import SignInPage from "./SignIn";
 
 //ReactDOM.render(<Routes history={browserHistory} />, document.getElementById('root'));
 //ReactDOM.render(<HomePage/>, document.getElementById('root'));
 
 ReactDOM.render(
   <div>
-    <HomePage />
+    {/* <HomePage /> */}
+    {/* <LoginPage /> */}
+    {/* <SampleLogin /> */}
+    {/* <App /> */}
+    <WelcomePage />
+    {/* <SignInPage /> */}
   </div>,
   document.getElementById("root")
 );
