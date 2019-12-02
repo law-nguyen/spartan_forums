@@ -14,13 +14,6 @@
   background-color: lightskyblue;
 }
 
-.yellow-square {
-  background-color: #ffdc00;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-}
-
 .top-padding {
   height: 10px;
 }
@@ -40,10 +33,6 @@
 
 .image-padding {
   height: 3px;
-}
-
-.mt-n1 {
-  margin-top: -0.25rem !important;
 }
 
 .dropdown {

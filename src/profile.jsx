@@ -89,11 +89,18 @@ class ProfilePage extends Component {
         <Modal isOpen={this.state.toggle.block}>
           <ModalHeader>ARE YOU SURE?</ModalHeader>
           <ModalBody>
-            Are you sure you want to delete this user? They're kinda cute and
+            Are you sure you want to block this user? They're kinda cute and
             they'll be gone forever if you do.
           </ModalBody>
           <ModalFooter>
-            <Button variant="danger">Yes, they're dead to me</Button>
+            <Button
+              variant="danger"
+              onClick={() => {
+                this.setState({ toggle: !this.state.toggle.delete });
+              }}
+            >
+              Yes, they're dead to me
+            </Button>
             <Button
               variant="light"
               onClick={() => {
@@ -246,7 +253,7 @@ class ProfilePage extends Component {
             </div>
           </Navbar.Collapse>
         </Navbar>
-        <div>
+        <div className="profile-card">
           <h2>User Profile</h2>
           <div className="center">
             <ul className="profileInfo">
