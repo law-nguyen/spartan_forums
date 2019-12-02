@@ -214,18 +214,6 @@ class ProfilePage extends Component {
                 </Badge>
               </Nav.Link>
             </Nav>
-<<<<<<< HEAD
-            <Col md={{ span: 5 }}>
-              <Form inline>
-                <FormControl
-                  type="text"
-                  placeholder="Search"
-                  className="mr-sm-2 mr-lg-1"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
-            </Col>
-=======
             <Form inline>
               <FormControl
                 type="text"
@@ -236,7 +224,6 @@ class ProfilePage extends Component {
             </Form>
 
             {/* Adds the profile icon top right */}
->>>>>>> 238d0f4d0bf7b3e6792c7ccf45fcc3a335851a17
             <div class="">
               <Dropdown alignRight>
                 <Dropdown.Toggle variant="light">
@@ -248,11 +235,7 @@ class ProfilePage extends Component {
                   />
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-<<<<<<< HEAD
-                  <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-=======
                   <Dropdown.Item href="/profile">Profile</Dropdown.Item>
->>>>>>> 238d0f4d0bf7b3e6792c7ccf45fcc3a335851a17
                   <Dropdown.Item href="#/action-2">Settings </Dropdown.Item>
                   <Dropdown.Divider />
                   <Dropdown.Item href="#/action-3">
@@ -263,69 +246,6 @@ class ProfilePage extends Component {
             </div>
           </Navbar.Collapse>
         </Navbar>
-<<<<<<< HEAD
-        {/*profile card*/}
-        <div>
-          <div class="top-padding"></div>
-          <Row>
-            <Col md={{ span: 3, offset: 0 }}>
-              <Container>
-                {/* <Button variant="light"> Back to Home</Button> */}
-              </Container>
-            </Col>
-            <Col md="auto"></Col>
-            <Col>
-              <div class="profile-card">
-                <Container>
-                  <Row>
-                    <div class="mx-auto">
-                      <h2>Profile Page</h2>
-                    </div>
-                  </Row>
-                  <Row>
-                    <div class="yellow-square">
-                      <div class="image-padding"></div>
-                      <Col>
-                        <Image
-                          src="./img/b man.png"
-                          width="100"
-                          height="100"
-                          fluid
-                        />
-                      </Col>
-                    </div>
-                  </Row>
-                  <div class="profile-buttons-padding"></div>
-                  {/* <Row> testing stuff
-                    <div class="col px-md-5">
-                      <div class="p-3 border bg-light">1 of 2</div>
-                    </div>
-                    <div class="col px-md-5">
-                      <div class="p-3 border bg-light">2 of 2</div>
-                    </div>
-                  </Row> */}
-                  <div class="mx-auto">
-                    <h6>Username: b man</h6>
-                    <h6>Name: Lawrence Nguyen</h6>
-                    <h6>Major: CMPE (LUL)</h6>
-                    <h6>Interests: pad</h6>
-                  </div>
-                  <Row>
-                    {/* <div class="col px-md-3"></div> */}
-                    {/* <div class="col "> */}
-                    <div class="mx-auto">
-                      <Button className="mr-3 btn-primary">Add Friend</Button>
-                      {/* </div> */}
-                      {/* <div class="col"> */}
-                      <Button className="ml-3 btn-danger">Block</Button>
-                    </div>
-                    {/* <div class="col px-md-3"></div> */}
-                  </Row>
-                </Container>
-              </div>
-            </Col>
-          </Row>
-=======
         <div>
           <h2>User Profile</h2>
           <div className="center">
@@ -346,7 +266,6 @@ class ProfilePage extends Component {
               </Row>
             </ul>
           </div>
->>>>>>> 238d0f4d0bf7b3e6792c7ccf45fcc3a335851a17
         </div>
       </div>
     );
