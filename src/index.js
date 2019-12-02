@@ -35,7 +35,6 @@ class App extends React.Component {
   }
 }
 
-<<<<<<< HEAD
 ReactDOM.render(
   <div>
     {/* <HomePage /> */}
@@ -47,8 +46,6 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
-=======
 ReactDOM.render(<App />, document.getElementById("root"));
->>>>>>> 238d0f4d0bf7b3e6792c7ccf45fcc3a335851a17
 
 registerServiceWorker();
