@@ -76,7 +76,7 @@ class HomePage extends Component {
                   <Dropdown.Item href="/profile">Profile</Dropdown.Item>
                   <Dropdown.Item href="#/action-2">Settings </Dropdown.Item>
                   <Dropdown.Divider />
-                  <Dropdown.Item href="#/action-3">
+                  <Dropdown.Item href="">
                     <p class="text-danger">Sign Out</p>
                   </Dropdown.Item>
                 </Dropdown.Menu>

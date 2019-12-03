@@ -122,7 +122,7 @@ class ProfilePage extends Component {
       <div>
         <div>
           <Button
-            variant="primary"
+            type="danger"
             onClick={() => {
               this.setState({ toggle: { edit: true } });
             }}
@@ -221,14 +221,16 @@ class ProfilePage extends Component {
                 </Badge>
               </Nav.Link>
             </Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
+            <Col md={{ span: 6 }}>
+              <Form inline>
+                <FormControl
+                  type="text"
+                  placeholder="Search"
+                  className="mr-sm-2 mr-lg-1"
+                />
+                <Button variant="outline-success">Search</Button>
+              </Form>
+            </Col>
 
             {/* Adds the profile icon top right */}
             <div class="">
@@ -253,25 +255,55 @@ class ProfilePage extends Component {
             </div>
           </Navbar.Collapse>
         </Navbar>
+<<<<<<< HEAD
         <div className="profile-card">
           <h2>User Profile</h2>
           <div className="center">
             <ul className="profileInfo">
+=======
+        {/* Profile Card */}
+        {/* <div className="profile-card"> */}
+        <div className="wrapper">
+          <div className="form-wrapper">
+            <div className="margin">
+              <h2>User Profile</h2>
+            </div>
+            {/* <div className="center"> */}
+            {/* <ul className="profileInfo"> */}
+            <div className="margin">
+>>>>>>> d1a59476f5ec5f801affdcddaf1a940a4ce190b8
               <Container>
-                <Image src="./public/img/unknown.png" roundedCircle />
+                <Image
+                  src="./img/b man.png"
+                  roundedCircle
+                  width="90px"
+                  height="110px"
+                />
               </Container>
-              <Badge pill variant="primary">
-                {this.state.user.membership}
-              </Badge>
-              <h3>{this.state.user.name}</h3>
-              <h5>Major: {this.state.user.major}</h5>
-              <h5>Interests: {this.state.user.interests}</h5>
+            </div>
 
-              <Row>
+            <Badge pill variant="primary">
+              {this.state.user.membership}
+            </Badge>
+            <h3>{this.state.user.name}</h3>
+            <h5>Major: {this.state.user.major}</h5>
+            <h5>Interests: {this.state.user.interests}</h5>
+
+            {/* <div className="profileButtons">
+              <Col>{this.EditModalButton}</Col>
+            </div> */}
+
+            <Row>
+              {/* <Col md={{ span: 2 }}></Col> */}
+              <div className="margin">
                 <Col>{this.EditModalButton()}</Col>
+              </div>
+              <div className="margin">
                 <Col>{this.BlockModalButton()}</Col>
-              </Row>
-            </ul>
+              </div>
+            </Row>
+            {/* </ul> */}
+            {/* </div> */}
           </div>
         </div>
       </div>
