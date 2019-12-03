@@ -255,12 +255,6 @@ class ProfilePage extends Component {
             </div>
           </Navbar.Collapse>
         </Navbar>
-<<<<<<< HEAD
-        <div className="profile-card">
-          <h2>User Profile</h2>
-          <div className="center">
-            <ul className="profileInfo">
-=======
         {/* Profile Card */}
         {/* <div className="profile-card"> */}
         <div className="wrapper">
@@ -271,7 +265,6 @@ class ProfilePage extends Component {
             {/* <div className="center"> */}
             {/* <ul className="profileInfo"> */}
             <div className="margin">
->>>>>>> d1a59476f5ec5f801affdcddaf1a940a4ce190b8
               <Container>
                 <Image
                   src="./img/b man.png"

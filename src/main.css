@@ -14,8 +14,6 @@
   background-color: lightskyblue;
 }
 
-<<<<<<< HEAD
-=======
 .yellow-square {
   background-color: #ffdc00;
   width: 100px;
@@ -28,17 +26,12 @@
   margin: 0 auto;
 }
 
->>>>>>> d1a59476f5ec5f801affdcddaf1a940a4ce190b8
 .top-padding {
   height: 10px;
 }
 
 .profile-card {
-<<<<<<< HEAD
-  border: 1px solid black;
-=======
   border: 1px solid grey;
->>>>>>> d1a59476f5ec5f801affdcddaf1a940a4ce190b8
   margin: 20px;
   border-radius: 10px;
   width: 50%;
@@ -54,21 +47,16 @@
   height: 3px;
 }
 
-<<<<<<< HEAD
-=======
 .mt-n1 {
   margin-top: -0.25rem !important;
 }
 
->>>>>>> d1a59476f5ec5f801affdcddaf1a940a4ce190b8
 .dropdown {
   margin-left: 2px;
   margin-right: 2px;
   margin-top: 2px;
   margin-bottom: 2px;
 }
-<<<<<<< HEAD
-=======
 
 .icon-login-square {
   background-color: white;
@@ -99,10 +87,6 @@
   border-radius: 10px;
   box-shadow: 0px 10px 50px #555;
   background-color: white;
-}
-
- {
-  /*h3 and h5 overridden*/
 }
 
 h2 {
@@ -172,4 +156,3 @@ h5 {
   margin-right: auto;
   margin-bottom: 15px;
 }
->>>>>>> d1a59476f5ec5f801affdcddaf1a940a4ce190b8
