@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Routes from "./routes";
 import { browserHistory } from "react-router";
 import "./main.css";
+import Posts from "./containers/Posts/postPage";
 import {
   Navbar,
   Nav,

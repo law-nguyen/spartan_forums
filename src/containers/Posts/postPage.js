@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import { BrowserRouter } from "react-router-dom";
 import "./postsFormat.css";
-import Post from "./individualPost";
 
 class Posts extends Component {
   handleUpvote = (post, key) => {

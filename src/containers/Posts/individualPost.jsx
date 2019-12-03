@@ -21,11 +21,26 @@ import "./postsFormat.css";
 class Post extends Component {
   constructor() {
     super();
+    this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
+    this.handleComment = this.handleComment.bind(this);
   }
 
   state = {
     //title, body, author, date posted, category, likes, comments
     comment: ""
+  };
+
+  handleCommentSubmit = e => {
+    e.preventDefault();
+    this.props.firebase.ref("posts").push({
+      comments: this.state.comment
+    });
+  };
+
+  handleComment = c => {
+    this.setState({
+      comment: c.target.value
+    });
   };
 
   render() {
@@ -86,24 +101,20 @@ class Post extends Component {
                         </div>
                         <div class="postFooter">
                           <Form.Group controlId="exampleForm.ControlTextarea1">
-                            {/* <Form.Label>Leave A Comment</Form.Label> */}
-                            <Form.Control
-                              as="textarea"
-                              rows="3"
-                              type="text"
-                              placeholder="Leave A Comment"
-                              /* <Form.Label>Leave A Comment</Form.Label> 
-
-                                  This is the submit button. When you press it, it pushes to database (FIX LATER)
-                                     onChange={this.handleChange}
-                                     value={this.state.comment}
-                              */
+                            <Form.Label>Leave A Comment</Form.Label>
+                            <input
+                              type="CommentOfPost"
+                              placeholder="Write a comment"
+                              onChange={this.handleComment}
+                              value={this.state.comment}
                             />
 
-                            {/*     
-                                Put onClick={this.handleSubmit} after the "submit" later
-                           */}
-                            <button type="submit">Submit</button>
+                            <button
+                              type="submit"
+                              onClick={this.handleCommentSubmit}
+                            >
+                              Submit
+                            </button>
                           </Form.Group>
                         </div>
                       </Container>

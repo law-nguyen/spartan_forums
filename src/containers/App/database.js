@@ -27,13 +27,6 @@ class App extends Component {
         loading: false
       });
     });
-
-    commentsRef.on("value", function(snapshot) {
-      _this.setState({
-        postswithcomments: snapshot.val(),
-        loading: false
-      });
-    });
   }
 
   render() {
