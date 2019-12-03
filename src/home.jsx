@@ -25,57 +25,7 @@ import {
   Input
 } from "reactstrap";
 class HomePage extends Component {
-  state = {
-    toggle: false
-  };
-
-  newPostModal() {
-    return (
-      <div>
-        <Modal isOpen={this.state.toggle}>
-          <ModalHeader>New Post</ModalHeader>
-          <ModalBody>
-            <Form>
-              <FormGroup row>
-                <Label for="title" sm={2}>
-                  Title
-                </Label>
-                <Col sm={10}>
-                  <Input type="name" name="title" id="title" />
-                </Col>
-              </FormGroup>
-              <FormGroup row>
-                <Label for="exampleText" sm={2}>
-                  Text Area
-                </Label>
-                <Col sm={10}>
-                  <Input type="textarea" name="text" id="exampleText" />
-                </Col>
-              </FormGroup>
-            </Form>
-          </ModalBody>
-          <ModalFooter>
-            <Button
-              variant="primary"
-              onClick={() => {
-                this.setState({ toggle: !this.state.toggle });
-              }}
-            >
-              Submit
-            </Button>
-            <Button
-              variant="light"
-              onClick={() => {
-                this.setState({ toggle: !this.state.toggle });
-              }}
-            >
-              Cancel
-            </Button>
-          </ModalFooter>
-        </Modal>
-      </div>
-    );
-  }
+  state = {};
 
   render() {
     return (
@@ -91,12 +41,7 @@ class HomePage extends Component {
             <Nav className="mr-auto">
               <Nav.Link href="#home"></Nav.Link>
 
-              <Nav.Link
-                href=""
-                onClick={() => {
-                  this.setState({ toggle: !this.state.toggle });
-                }}
-              >
+              <Nav.Link href="/add-post">
                 <Image src="./img/new_post.png" width="30" height="30" />
               </Nav.Link>
 
