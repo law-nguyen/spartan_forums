@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Col, Row, Form, Button, Container } from "react-bootstrap";
+import { Col, Row, Form, Button, Container, Nav } from "react-bootstrap";
+import "./addPost.css";
 
 class AddPost extends Component {
   constructor() {
@@ -45,41 +46,100 @@ class AddPost extends Component {
 
   render() {
     return (
-      <div>
-        <Row>
-          <Col xs lg="2">
-            <Container>
-              <Button variant="light">Back</Button>
-            </Container>
-          </Col>
-          <Col md="auto"></Col>
-          <Col xl lg="2">
-            <Form>
-              <Form.Group controlId="Title">
-                <Form.Label>Title</Form.Label>
-                <Form.Control
-                  type="name"
-                  placeholder="your epic title"
-                  onChange={this.handleTitle}
-                  value={this.state.title}
-                />
-              </Form.Group>
-              <Form.Group controlId="Body">
-                <Form.Label>The body of your post</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows="5"
-                  onChange={this.handleBody}
-                  value={this.state.body}
-                />
-              </Form.Group>
-            </Form>
-            <Button variant="primary" onClick={this.handleSubmit} href="/home">
+      <div className="wrapper">
+        <div className="form-wrapper">
+          <h3>Create your Post!</h3>
+          <div className="margin"> </div>
+          <div className="title">
+            <label htmlFor="title">Title</label>
+            <input
+              type="name"
+              placeholder="your epic title"
+              onChange={this.handleTitle}
+              value={this.state.title}
+            ></input>
+          </div>
+          <div className="postContent">
+            <Form.Group controlId="Body">
+              <label htmlFor="postContent">The body of your post</label>
+              <Form.Control
+                as="textarea"
+                rows="5"
+                onChange={this.handleBody}
+                value={this.state.body}
+              />
+            </Form.Group>
+          </div>
+          <Form>
+            {/* <Form.Group controlId="Title">
+              <Form.Label>Title</Form.Label>
+              <Form.Control
+                type="name"
+                placeholder="your epic title"
+                onChange={this.handleTitle}
+                value={this.state.title}
+              />
+            </Form.Group> */}
+            {/* <Form.Group controlId="Body">
+              <Form.Label>The body of your post</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows="5"
+                onChange={this.handleBody}
+                value={this.state.body}
+              />
+            </Form.Group> */}
+          </Form>
+
+          {/*When user clicks on back to post button, redirect them to home site*/}
+          <div className="addPostSubmit">
+            <button type="submit" onClick={this.handleSubmit}>
               Submit
-            </Button>
-          </Col>
-        </Row>
+            </button>
+            <Nav.Link href="/posts">
+              <small>
+                <u>Back to posts</u>
+              </small>
+            </Nav.Link>
+            {/* <a href="/posts">Back to posts</a> */}
+          </div>
+        </div>
       </div>
+      // <div>
+      //   <Row>
+      //     <Col xs lg="2">
+      //       <Container>
+      //         <Button variant="light">Back</Button>
+      //       </Container>
+      //     </Col>
+      //     <Col md="auto"></Col>
+      //     <Col xl lg="2">
+      //       <Form>
+      //         <Form.Group controlId="Title">
+      //           <Form.Label>Title</Form.Label>
+      //           <Form.Control
+      //             type="name"
+      //             placeholder="your epic title"
+      //             onChange={this.handleTitle}
+      //             value={this.state.title}
+      //           />
+      //         </Form.Group>
+      //         <Form.Group controlId="Body">
+      //           <Form.Label>The body of your post</Form.Label>
+      //           <Form.Control
+      //             as="textarea"
+      //             rows="5"
+      //             onChange={this.handleBody}
+      //             value={this.state.body}
+      //           />
+      //         </Form.Group>
+      //       </Form>
+      //       <Button variant="primary" onClick={this.handleSubmit} href="/home">
+      //         Submit
+      //       </Button>
+      //     </Col>
+      //   </Row>
+      // </div>
       // <div className="AddPost">
       //   <input
       //     type="text"

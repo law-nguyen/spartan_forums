@@ -7,6 +7,8 @@ import AddPost from "./containers/AddPost/addPost";
 import SignIn from "./containers/SignIn/signIn";
 import Post from "./containers/Posts/individualPost";
 import ProfilePage from "./profile";
+import CreateAccount from "./CreateAccount";
+import SignInPage from "./SignIn";
 
 const Routes = props => (
   <Router {...props}>
@@ -17,6 +19,8 @@ const Routes = props => (
       <Route path="/signIn" component={SignIn} />
       <Route path="/profile" component={ProfilePage} />
       <Route path="/view/posts/:postId" component={Post} />
+      <Route path="/create-account" component={CreateAccount} />
+      <Route path="/login" component={SignInPage} />
     </Route>
   </Router>
 );

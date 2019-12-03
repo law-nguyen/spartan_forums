@@ -89,18 +89,11 @@ class ProfilePage extends Component {
         <Modal isOpen={this.state.toggle.block}>
           <ModalHeader>ARE YOU SURE?</ModalHeader>
           <ModalBody>
-            Are you sure you want to block this user? They're kinda cute and
+            Are you sure you want to delete this user? They're kinda cute and
             they'll be gone forever if you do.
           </ModalBody>
           <ModalFooter>
-            <Button
-              variant="danger"
-              onClick={() => {
-                this.setState({ toggle: !this.state.toggle.delete });
-              }}
-            >
-              Yes, they're dead to me
-            </Button>
+            <Button variant="danger">Yes, they're dead to me</Button>
             <Button
               variant="light"
               onClick={() => {
@@ -132,7 +125,7 @@ class ProfilePage extends Component {
         </div>
 
         <Modal isOpen={this.state.toggle.edit}>
-          <ModalHeader>Modal title</ModalHeader>
+          <ModalHeader>Edit Existing Information About You</ModalHeader>
           <ModalBody>
             <Form>
               <Form.Group controlId="formBasicName">
@@ -158,7 +151,7 @@ class ProfilePage extends Component {
                     this.change(event, "major");
                   }}
                 />
-                <Form.Text className="text-muted">what is your major</Form.Text>
+                <Form.Text className="text-muted">What's your major?</Form.Text>
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword">
@@ -199,62 +192,6 @@ class ProfilePage extends Component {
   render() {
     return (
       <div>
-        <Navbar bg="light" expand="lg">
-          {/* If Logo on top left is clicked, redirect to home page */}
-          <Navbar.Brand href="/posts">
-            <Image src="./img/icon.jpg" width="50" height="50" />
-          </Navbar.Brand>
-          <Navbar.Brand href="#home">Spartan Forums</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home"></Nav.Link>
-
-              <Nav.Link href="/add-post">
-                <Image src="./img/new_post.png" width="30" height="30" />
-              </Nav.Link>
-
-              <Nav.Link href="#inbox">
-                <Image src="./img/mail.jpg" width="30" height="32" />
-                <Badge pill variant="danger" class="iconBadge">
-                  2{/* put in lower right  and resize */}
-                </Badge>
-              </Nav.Link>
-            </Nav>
-            <Col md={{ span: 6 }}>
-              <Form inline>
-                <FormControl
-                  type="text"
-                  placeholder="Search"
-                  className="mr-sm-2 mr-lg-1"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
-            </Col>
-
-            {/* Adds the profile icon top right */}
-            <div class="">
-              <Dropdown alignRight>
-                <Dropdown.Toggle variant="light">
-                  <Image
-                    src="./img/b man.png"
-                    width="30"
-                    height="30"
-                    thumbnail
-                  />
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Settings </Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href="#/action-3">
-                    <p class="text-danger">Sign Out</p>
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div>
-          </Navbar.Collapse>
-        </Navbar>
         {/* Profile Card */}
         {/* <div className="profile-card"> */}
         <div className="wrapper">

@@ -48,6 +48,8 @@ class Posts extends Component {
         {Object.keys(posts).map(function(key) {
           return (
             <div key={key} class="post">
+              {/* // <div className="wrapper"> */}
+              {/* // <div className="form-wrapper"> */}
               <h2>
                 <BrowserRouter>
                   {/* When clicked on a post, link them to that specific post */}
@@ -84,6 +86,7 @@ class Posts extends Component {
                 </Button>
               </div>
             </div>
+            // </div>
           );
         })}
       </div>
