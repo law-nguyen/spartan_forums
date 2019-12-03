@@ -156,3 +156,11 @@ h5 {
   margin-right: auto;
   margin-bottom: 15px;
 }
+
+.searchButton {
+}
+.searchButton:hover {
+  color: #fdbf5c;
+  background-color: #fff;
+  border: 2px solid #fdbf5c;
+}
