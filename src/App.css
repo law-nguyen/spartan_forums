@@ -13,7 +13,7 @@ light green: #A3C4BC
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
 }
 
 .form-wrapper {
