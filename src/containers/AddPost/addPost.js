@@ -6,7 +6,7 @@ class AddPost extends Component {
     super();
 
     this.handleTitle = this.handleTitle.bind(this);
-    this.handleBody = this.handleBody.bind(this);
+    // this.handleBody = this.handleBody.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
