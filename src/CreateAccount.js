@@ -116,6 +116,7 @@ class CreateAccount extends Component {
     }
 
     this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {

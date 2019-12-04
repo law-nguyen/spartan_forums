@@ -27,9 +27,9 @@ class Posts extends Component {
     this.props.firebase.ref("posts/" + key).remove();
   };
 
-  //handleTransferToPost = (post, key) => {
-  //this.props.firebase.ref("posts/" + key).set;
-  //};
+  // handleTransferToPost = (post, key) => {
+  //   this.props.firebase.ref("posts/" + key).set;
+  // };
 
   render() {
     let posts = this.props.posts;
@@ -47,46 +47,44 @@ class Posts extends Component {
       <div>
         {Object.keys(posts).map(function(key) {
           return (
-            <div key={key} class="post">
-              {/* // <div className="wrapper"> */}
-              {/* // <div className="form-wrapper"> */}
-              <h2>
-                <BrowserRouter>
-                  {/* When clicked on a post, link them to that specific post */}
-                  <Link to={`/view/posts/${key}`}>
-                    Title: {posts[key].title}
-                  </Link>
-                </BrowserRouter>
-              </h2>
+            // <div key={key} class="post">
+            <div key={key} className="postPage-wrapper">
+              <div class="postPage-form-wrapper">
+                <h2>
+                  <BrowserRouter>
+                    {/* When clicked on a post, link them to that specific post */}
+                    <Link to={`/view/posts/${key}`}>{posts[key].title}</Link>
+                  </BrowserRouter>
+                </h2>
 
-              <div>Votes: {posts[key].upvote}</div>
-              {/* <div>Body: {posts[key].body}</div> */}
+                <div>Votes: {posts[key].upvote}</div>
+                {/* <div>Body: {posts[key].body}</div> */}
 
-              <div>
-                <Button
-                  className="m-2"
-                  variant="light"
-                  onClick={_this.handleUpvote.bind(this, posts[key], key)}
-                >
-                  Upvote
-                </Button>
-                <Button
-                  className="m-2"
-                  variant="light"
-                  onClick={_this.handleDownvote.bind(this, posts[key], key)}
-                >
-                  Downvote
-                </Button>
-                <Button
-                  className="m-2"
-                  variant="outline-danger"
-                  onClick={_this.handleDeletePost.bind(this, posts[key], key)}
-                >
-                  Delete Post
-                </Button>
+                <div>
+                  <Button
+                    className="m-2"
+                    variant="light"
+                    onClick={_this.handleUpvote.bind(this, posts[key], key)}
+                  >
+                    Upvote
+                  </Button>
+                  <Button
+                    className="m-2"
+                    variant="light"
+                    onClick={_this.handleDownvote.bind(this, posts[key], key)}
+                  >
+                    Downvote
+                  </Button>
+                  <Button
+                    className="m-2"
+                    variant="outline-danger"
+                    onClick={_this.handleDeletePost.bind(this, posts[key], key)}
+                  >
+                    Delete Post
+                  </Button>
+                </div>
               </div>
             </div>
-            // </div>
           );
         })}
       </div>

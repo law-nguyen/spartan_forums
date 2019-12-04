@@ -154,12 +154,11 @@ class SignInPage extends Component {
             <h3>Sign In</h3>
           </div>
 
-          {/*
-          <div className="App">
-            Checks to see if user is logged in. If they are, push them to homepage. If not, push them back to login screen *
+          {/* <div className="App">
+            Checks to see if user is logged in. If they are, push them to
+            homepage. If not, push them back to login screen *
             {this.state.user ? <HomePage /> : <SignInPage />}
-          </div>
-          */}
+          </div> */}
 
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="email">
