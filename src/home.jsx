@@ -59,8 +59,8 @@ class HomePage extends Component {
                   placeholder="Search"
                   className="mr-sm-2 mr-lg-1"
                 />
-                {/* <Button variant="outline-success">Search</Button> */}
-                <button type="editButton">Search</button>
+                <Button variant="outline-success">Search</Button>
+                {/* <button type="editButton">Search</button> */}
               </Form>
             </Col>
 
