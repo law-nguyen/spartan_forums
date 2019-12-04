@@ -1,22 +1,9 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import firebase from "firebase";
 
 import "./postsFormat.css";
 
-import {
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Image,
-  Badge,
-  Row,
-  Col,
-  Container
-} from "react-bootstrap";
+import { Form, Row, Col, Container } from "react-bootstrap";
 import "./postsFormat.css";
 
 class Post extends Component {
@@ -37,14 +24,14 @@ class Post extends Component {
 
     return (
       <div>
-        {/* key={key} belongs in the div bellow? */}
-
         <div class="post">
           <div class="body">
             <Row>
               <Col xs lg="2">
                 <Container>
-                  <Button variant="light">Back</Button>
+                  <Button variant="light" href="/posts">
+                    Back
+                  </Button>
                 </Container>
               </Col>
               <Col md="auto"></Col>
