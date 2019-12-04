@@ -4,7 +4,7 @@ import { Router, Route } from "react-router";
 import App from "./containers/App/database";
 import Posts from "./containers/Posts/postPage";
 import AddPost from "./containers/AddPost/addPost";
-import SignIn from "./containers/SignIn/signIn";
+import SignIn from "./SignIn";
 import Post from "./containers/Posts/individualPost";
 import ProfilePage from "./profile";
 import CreateAccount from "./CreateAccount";
