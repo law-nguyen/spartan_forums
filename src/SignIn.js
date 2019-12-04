@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import App from "./containers/SignIn/signIn";
 import {
   Navbar,
   Nav,
@@ -156,6 +157,9 @@ class SignInPage extends Component {
                   <u>Forgot your username/password?</u>
                 </small>
               </Nav.Link>
+            </div>
+            <div className="withGoogle">
+              <App />
             </div>
           </form>
         </div>

@@ -17,7 +17,7 @@ light green: #A3C4BC
 }
 
 .form-wrapper {
-  width: 400px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   padding: 20px 40px;
@@ -25,37 +25,7 @@ light green: #A3C4BC
   box-shadow: 0px 10px 50px #555;
   background-color: #ffffff;
   position: relative;
-  top: -40px;
-}
-
-.createAccount-form-wrapper {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0px 10px 50px #555;
-  background-color: #ffffff;
-  position: relative;
-  top: -10px;
-}
-
-.welcome-form-wrapper {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0px 10px 50px #555;
-  background-color: #ffffff;
-}
-
-.welcome-text-margin {
-  margin-bottom: 20px;
-}
-
-.signin-text-margin {
-  margin-bottom: 15px;
+  top: -30px;
 }
 
 form {
@@ -112,37 +82,16 @@ input.error {
   display: relative;
 }
 
-.firstName {
-  margin-right: 1%;
-}
-
-.lastName {
-  margin-left: 1%;
-}
-
-.firstName,
-.lastName,
-.email,
-.password,
-.studentID {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.userName,
-.interests,
-.major,
-.graduatingYear {
+.title,
+.postContent {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
   width: 100%;
 }
 
-.firstName,
-.lastName {
-  width: 49%;
+.title label {
+  margin-left: 0px;
 }
 
 .email,
@@ -151,14 +100,16 @@ input.error {
   width: 100%;
 }
 
-.createAccount {
+.addPostSubmit {
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.createAccount button {
+.addPostSubmit button {
   background-color: #fdbf5c;
   color: #fff;
   border: 2px solid #fff;
@@ -171,62 +122,29 @@ input.error {
   margin-bottom: 0.25em;
 }
 
-.createAccount button:hover {
+.addPostSubmit button:hover {
   color: #fdbf5c;
   background-color: #fff;
   border: 2px solid #fdbf5c;
 }
-
-.createAccount small {
-  color: #999;
-  font-weight: lighter;
-}
-
-.welcomeSubmit {
-  margin-left: 150px;
-  margin-right: 150px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.welcomeSubmit button {
-  background-color: #fdbf5c;
-  color: #fff;
-  border: 2px solid #fff;
-  width: 100%;
-  margin-top: 1em;
-  padding: 8px 0px;
-  font-size: 1em;
-  font-weight: lighter;
-  letter-spacing: 1px;
-  margin-bottom: 0.25em;
-}
-
-.welcomeSubmit button:hover {
-  color: #fdbf5c;
-  background-color: #fff;
-  border: 2px solid #fdbf5c;
-}
-.welcomeSubmit custom,
+.addPostSubmit custom,
 .signIn custom {
   color: black;
 }
 
-.welcomeSubmit small {
+.addPostSubmit small {
   color: #999;
   font-weight: lighter;
 }
 
-.signIn {
+/* .signIn {
   margin-left: 50px;
   margin-right: 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .signIn button {
   background-color: #fdbf5c;
@@ -241,39 +159,7 @@ input.error {
   margin-bottom: 0.25em;
 }
 
-.withGoogle {
-  margin-left: 50px;
-  margin-right: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.signIn small {
+.small {
   color: #999;
   font-weight: lighter;
-}
-
-.postPage-wrapper {
-  height: 35vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-}
-
-.postPage-form-wrapper {
-  width: 600px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0px 10px 50px rgb(209, 203, 203);
-  background-color: #ffffff;
-  position: relative;
-  top: 10px;
 }

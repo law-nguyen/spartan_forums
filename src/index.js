@@ -8,17 +8,12 @@ import AddPost from "./containers/AddPost/addPost";
 import SignIn from "./containers/SignIn/signIn";
 import Post from "./containers/Posts/individualPost";
 import ProfilePage from "./profile";
-import LoginPage from "./loginPage";
 import CreateAccount from "./CreateAccount";
 import WelcomePage from "./Welcome";
 import SignInPage from "./SignIn";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// ReactDOM.render(
-//   <Routes history={browserHistory} />,
-//   document.getElementById("root")
-// );
 // ReactDOM.render(<HomePage />, document.getElementById("root"));
 // class App extends React.Component {
 //   render() {
@@ -37,17 +32,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //   }
 // }
 
-ReactDOM.render(
-  <div>
-    {/* <HomePage /> */}
-    {/* <LoginPage /> */}
-    {/* <CreateAccount /> */}
-    <ProfilePage />
-    {/* <WelcomePage /> */}
-    {/* <SignInPage /> */}
-  </div>,
-  document.getElementById("root")
-);
-// ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<HomePage />, document.getElementById("root"));
 
 registerServiceWorker();

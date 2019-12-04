@@ -76,7 +76,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: #333;
 }
 
 .form-wrapper {
@@ -87,10 +87,6 @@
   border-radius: 10px;
   box-shadow: 0px 10px 50px #555;
   background-color: white;
-}
-
- {
-  /*h3 and h5 overridden*/
 }
 
 h2 {
@@ -159,4 +155,12 @@ h5 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+}
+
+.searchButton {
+}
+.searchButton:hover {
+  color: #fdbf5c;
+  background-color: #fff;
+  border: 2px solid #fdbf5c;
 }
