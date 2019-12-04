@@ -5,18 +5,28 @@ import "./main.css";
 import {
   Navbar,
   Nav,
-  Form,
-  FormControl,
   Button,
   Image,
   Badge,
   Row,
   Col,
   Container,
+  FormControl,
   Dropdown
 } from "react-bootstrap";
+import {
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+  Form,
+  FormGroup,
+  Label,
+  Input
+} from "reactstrap";
 class HomePage extends Component {
   state = {};
+
   render() {
     return (
       <div>
@@ -42,14 +52,17 @@ class HomePage extends Component {
                 </Badge>
               </Nav.Link>
             </Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
+            <Col md={{ span: 6 }}>
+              <Form inline>
+                <FormControl
+                  type="text"
+                  placeholder="Search"
+                  className="mr-sm-2 mr-lg-1"
+                />
+                <Button variant="outline-success">Search</Button>
+                {/* <button type="editButton">Search</button> */}
+              </Form>
+            </Col>
 
             {/* Adds the profile icon top right */}
             <div class="">
@@ -64,9 +77,9 @@ class HomePage extends Component {
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                   <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Settings </Dropdown.Item>
+                  <Dropdown.Item href="/settings">Settings </Dropdown.Item>
                   <Dropdown.Divider />
-                  <Dropdown.Item href="#/action-3">
+                  <Dropdown.Item href="">
                     <p class="text-danger">Sign Out</p>
                   </Dropdown.Item>
                 </Dropdown.Menu>
@@ -74,26 +87,14 @@ class HomePage extends Component {
             </div>
           </Navbar.Collapse>
         </Navbar>
-        <div class="body">
-          <Row>
-            <Col xs lg="2">
-              <Container class="sideBar">
-                {/* make this inside a light blue box or smthn */}
-                Directories you follow
-                <Nav defaultActiveKey="/home" className="flex-column">
-                  <Nav.Link href="#CMPE">#CMPE</Nav.Link>
-                  <Nav.Link href="#cooking">#cooking</Nav.Link>
-                  <Nav.Link href="#music">#music</Nav.Link>
-                </Nav>
-              </Container>
-            </Col>
-            <Col md="auto"></Col>
-            <Col xl lg="2">
-              {/* This adds the post page into the right column */}
-              <Routes history={browserHistory} />
-            </Col>
-          </Row>
-        </div>
+        {/* <div class="body"> */}
+        {/* <Row> */}
+        {/* <Col xl lg="2"> */}
+        {/* This adds the post page into the right column */}
+        <Routes history={browserHistory} />
+        {/* </Col> */}
+        {/* </Row> */}
+        {/* </div> */}
       </div>
     );
   }
