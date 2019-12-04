@@ -37,9 +37,15 @@ class Post extends Component {
               <div class="postBody">{posts[this.props.params.postId].body}</div>
               <div class="postFooter">
                 <div class="marginButtonIndiPost">
-                  <button className="mr-5">Like</button>
-                  <button className="mr-5">Save</button>
-                  <button className="mr-5">Share</button>
+                  <button className="mr-5">
+                    <custom>Like</custom>
+                  </button>
+                  <button className="mr-5">
+                    <custom>Save</custom>
+                  </button>
+                  <button className="mr-5">
+                    <custom>Share</custom>
+                  </button>
                 </div>
               </div>
               <div class="postFooter">
@@ -53,7 +59,9 @@ class Post extends Component {
                     />
                   </Form.Group>
                   <div className="post-comment">
-                    <button type="submit">Post Comment</button>
+                    <button type="submit">
+                      <custom>Post Comment</custom>
+                    </button>
                   </div>
                 </div>
               </div>

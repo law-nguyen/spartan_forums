@@ -114,7 +114,7 @@ class SignInPage extends Component {
       <div className="wrapper">
         <div className="form-wrapper">
           <div className="signin-text-margin">
-            <h3>Sign In</h3>
+            <h3>Spartan Forums Sign In</h3>
           </div>
 
           <form onSubmit={this.handleSubmit} noValidate>
@@ -149,7 +149,7 @@ class SignInPage extends Component {
             <div className="signIn">
               <button type="submit">
                 <Nav.Link href="/link-here">
-                  <custom>Log In</custom>
+                  <custom>Sign In</custom>
                 </Nav.Link>
               </button>
               <Nav.Link href="/retrieval">

@@ -185,7 +185,7 @@ h5 {
 }
 
 .indi-form-wrapper {
-  height: 80%;
+  height: 82%;
   width: 60%;
 
   display: flex;
@@ -196,7 +196,7 @@ h5 {
   background-color: #ffffff;
   position: relative;
   margin-bottom: 10px;
-  top: -40px;
+  top: -5%;
 }
 
 .margin-left {
@@ -208,6 +208,50 @@ h5 {
 .margin-right {
   margin-left: auto;
   margin-right: 0;
+}
+
+.profileButtons-mlbutton {
+  margin-left: 15%;
+  margin-right: auto;
+  margin-bottom: -20%;
+}
+
+.profileButtons-mrbutton {
+  margin-left: auto;
+  margin-right: 30%;
+  /* margin-bottom: -12%; */
+}
+
+.profileButtons-mrbutton button {
+  background-color: #fdbf5c;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 200%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.profileButtons-mrbutton custom,
+.profileButtons-mlbutton custom,
+.marginButtonIndiPost custom,
+.marginButton custom {
+  color: black;
+}
+.profileButtons-mlbutton button {
+  background-color: #fdbf5c;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 250%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
 }
 
 .marginButton {
@@ -231,7 +275,7 @@ h5 {
 .marginButton button:hover {
   color: #fdbf5c;
   background-color: #fff;
-  border: 2px solid #fdbf5c;
+  border: 2px solid #44413c;
 }
 
 .marginButtonIndiPost {
@@ -247,9 +291,10 @@ h5 {
   width: 25%;
   margin-top: 1em;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: light;
   letter-spacing: 1px;
   margin-bottom: 0.25em;
+  /* margin-bottom: 100px; */
 }
 
 .marginButtonIndiPost button:hover {
@@ -260,17 +305,17 @@ h5 {
 
 .post-comment {
   margin-left: auto;
-  margin-right: 0;
-  margin-bottom: 5px;
+  margin-right: 5%;
+  /* margin-bottom: -%; */
 }
 
 .post-comment button {
   background-color: #faad31;
   border: 2px solid white;
-  width: 100%;
-  margin-top: 1em;
+  width: 120%;
+  margin-top: -3%;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: light;
   letter-spacing: 1px;
   margin-bottom: 0.25em;
 }

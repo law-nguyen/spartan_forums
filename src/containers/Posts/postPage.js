@@ -66,21 +66,21 @@ class Posts extends Component {
                     variant="light"
                     onClick={_this.handleUpvote.bind(this, posts[key], key)}
                   >
-                    Upvote
+                    <custom>Upvote</custom>
                   </Button>
                   <Button
                     className="m-2"
                     variant="light"
                     onClick={_this.handleDownvote.bind(this, posts[key], key)}
                   >
-                    Downvote
+                    <custom>Downvote</custom>
                   </Button>
                   <Button
                     className="m-2"
                     variant="outline-danger"
                     onClick={_this.handleDeletePost.bind(this, posts[key], key)}
                   >
-                    Delete Post
+                    <custom>Delete Post</custom>
                   </Button>
                 </div>
               </div>
