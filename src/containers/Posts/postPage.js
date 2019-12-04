@@ -59,10 +59,10 @@ class Posts extends Component {
                   </BrowserRouter>
                 </h2>
 
-                <div>Votes: {posts[key].upvote}</div>
+                <div className="margin">Votes: {posts[key].upvote}</div>
                 {/* <div>Body: {posts[key].body}</div> */}
 
-                <div>
+                <div className="margin">
                   <Button
                     className="m-2"
                     variant="light"
