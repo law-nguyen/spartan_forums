@@ -36,21 +36,23 @@ class Post extends Component {
             <Container>
               <div class="postBody">{posts[this.props.params.postId].body}</div>
               <div class="postFooter">
-                <button className="mr-3">Like</button>
-                <button className="mr-3">Save</button>
-                <button className="mr-3">Share</button>
+                <div class="marginButtonIndiPost">
+                  <button className="mr-5">Like</button>
+                  <button className="mr-5">Save</button>
+                  <button className="mr-5">Share</button>
+                </div>
               </div>
               <div class="postFooter">
                 <div className="postContent">
                   <Form.Group controlId="Body">
                     <Form.Control
                       as="textarea"
-                      rows="6"
+                      rows="7"
                       type="text"
                       placeholder="Leave A Comment"
                     />
                   </Form.Group>
-                  <div className="post-comment-button">
+                  <div className="post-comment">
                     <button type="submit">Post Comment</button>
                   </div>
                 </div>

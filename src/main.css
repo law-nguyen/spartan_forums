@@ -209,3 +209,74 @@ h5 {
   margin-left: auto;
   margin-right: 0;
 }
+
+.marginButton {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.marginButton button {
+  background-color: #fdbf5c;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 30%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.marginButton button:hover {
+  color: #fdbf5c;
+  background-color: #fff;
+  border: 2px solid #fdbf5c;
+}
+
+.marginButtonIndiPost {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 5%;
+}
+
+.marginButtonIndiPost button {
+  background-color: #faad31;
+  border: 2px solid white;
+  width: 25%;
+  margin-top: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.marginButtonIndiPost button:hover {
+  color: #000000;
+  background-color: #fdbf5c;
+  border: 2px solid #fdbf5c;
+}
+
+.post-comment {
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 5px;
+}
+
+.post-comment button {
+  background-color: #faad31;
+  border: 2px solid white;
+  width: 100%;
+  margin-top: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.post-comment button:hover {
+  color: #000000;
+  background-color: #fdbf5c;
+  border: 2px solid #fdbf5c;
+}

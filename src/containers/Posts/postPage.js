@@ -53,16 +53,14 @@ class Posts extends Component {
                 <h2>
                   <BrowserRouter>
                     {/* When clicked on a post, link them to that specific post */}
-                    <Link to={`/view/posts/${key}`}>
-                      Title: {posts[key].title}
-                    </Link>
+                    <Link to={`/view/posts/${key}`}>{posts[key].title}</Link>
                   </BrowserRouter>
                 </h2>
 
                 <div className="margin">Votes: {posts[key].upvote}</div>
                 {/* <div>Body: {posts[key].body}</div> */}
 
-                <div className="margin">
+                <div className="marginButton">
                   <Button
                     className="m-2"
                     variant="light"
