@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Routes from "./routes";
 import { browserHistory } from "react-router";
 import "./main.css";
+import firebase from "firebase";
 import {
   Navbar,
   Nav,
@@ -25,7 +26,16 @@ import {
   Input
 } from "reactstrap";
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.logout = this.logout.bind(this);
+  }
   state = {};
+
+  logout() {
+    firebase.auth().logout();
+  }
 
   render() {
     return (
@@ -80,7 +90,9 @@ class HomePage extends Component {
                   <Dropdown.Item href="/settings">Settings </Dropdown.Item>
                   <Dropdown.Divider />
                   <Dropdown.Item href="">
-                    <p class="text-danger">Sign Out</p>
+                    <p class="text-danger" onClick={this.logout}>
+                      Sign Out
+                    </p>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

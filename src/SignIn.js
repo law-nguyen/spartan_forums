@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import App from "./containers/SignIn/signIn";
+import config from "./containers/App/firebase-config";
+import HomePage from "./home";
+import firebase from "firebase";
+
 import {
   Navbar,
   Nav,
@@ -38,6 +42,8 @@ const formValid = ({ formErrors, ...rest }) => {
 class SignInPage extends Component {
   constructor(props) {
     super(props);
+    this.login = this.login.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
     this.state = {
       //   email: null,
@@ -60,9 +66,39 @@ class SignInPage extends Component {
         password: "",
         major: "",
         graduatingYear: "",
-        studentID: ""
+        studentID: "",
+
+        user: {}
       }
     };
+  }
+
+  componentDidMount() {
+    this.authListener();
+  }
+
+  authListener() {
+    firebase.auth().onAuthStateChanged(user => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem("user", user.uid);
+      } else {
+        this.setState({ user });
+        localStorage.removeItem("user");
+      }
+    });
+  }
+
+  login(e) {
+    e.preventDefault();
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then(u => {})
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   handleSubmit = e => {
@@ -105,6 +141,7 @@ class SignInPage extends Component {
     }
 
     this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {
@@ -117,15 +154,23 @@ class SignInPage extends Component {
             <h3>Sign In</h3>
           </div>
 
+          {/*
+          <div className="App">
+            Checks to see if user is logged in. If they are, push them to homepage. If not, push them back to login screen *
+            {this.state.user ? <HomePage /> : <SignInPage />}
+          </div>
+          */}
+
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="email">
               <label htmlFor="email">Email</label>
               <input
                 className={formErrors.email.length > 0 ? "error" : null}
                 placeholder="Email"
-                type="text"
+                type="email"
                 name="email"
                 noValidate
+                value={this.state.email}
                 onChange={this.handleChange}
               />
               {formErrors.email.length > 0 && (
@@ -137,9 +182,10 @@ class SignInPage extends Component {
               <input
                 // className={formErrors.password.length > 0 ? "error" : null}
                 placeholder="Password"
-                type="text"
+                type="password"
                 name="password"
                 noValidate
+                value={this.state.password}
                 onChange={this.handleChange}
               />
               {formErrors.password.length > 0 && (
@@ -148,7 +194,7 @@ class SignInPage extends Component {
             </div>
             <div className="signIn">
               <button type="submit">
-                <Nav.Link href="/link-here">
+                <Nav.Link href="/posts">
                   <custom>Log In</custom>
                 </Nav.Link>
               </button>

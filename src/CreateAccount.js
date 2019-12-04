@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import firebase from "firebase";
+
 import {
   Navbar,
   Nav,
@@ -37,6 +39,7 @@ const formValid = ({ formErrors, ...rest }) => {
 class CreateAccount extends Component {
   constructor(props) {
     super(props);
+    this.signUp = this.signUp.bind(this);
 
     this.state = {
       firstName: null,
@@ -52,6 +55,17 @@ class CreateAccount extends Component {
         studentID: ""
       }
     };
+  }
+
+  signUp(e) {
+    e.preventDefault();
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(this.state.email, this.state.password)
+      .then(u => {})
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   handleSubmit = e => {
@@ -185,7 +199,7 @@ class CreateAccount extends Component {
             </div>
             <div className="createAccount">
               <button type="submit">
-                <Nav.Link href="/link-here">Create Account</Nav.Link>
+                <Nav.Link href="/posts">Create Account</Nav.Link>
               </button>
               <Nav.Link href="/login">
                 <small>Already Have an Account?</small>
