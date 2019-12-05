@@ -83,7 +83,7 @@ class ProfilePage extends Component {
               this.setState({ toggle: { block: true } });
             }}
           >
-            Block
+            <custom>Block</custom>
           </Button>
         </div>
         <Modal isOpen={this.state.toggle.block}>
@@ -120,12 +120,12 @@ class ProfilePage extends Component {
               this.setState({ toggle: { edit: true } });
             }}
           >
-            Edit
+            <custom>Edit</custom>
           </Button>
         </div>
 
         <Modal isOpen={this.state.toggle.edit}>
-          <ModalHeader>Modal title</ModalHeader>
+          <ModalHeader>Edit Existing Information About You</ModalHeader>
           <ModalBody>
             <Form>
               <Form.Group controlId="formBasicName">
@@ -151,19 +151,18 @@ class ProfilePage extends Component {
                     this.change(event, "major");
                   }}
                 />
-                <Form.Text className="text-muted">what is your major</Form.Text>
+                <Form.Text className="text-muted">What's your major?</Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+              <Form.Group controlId="formBasicName">
+                <Form.Label>Interests</Form.Label>
                 <Form.Control
-                  type="password"
-                  placeholder="Password"
+                  type="interests"
+                  placeholder="What do you like?"
                   onChange={event => {
-                    this.change(event, "password");
+                    this.change(event, "interests");
                   }}
                 />
-                <Form.Text className="text-muted">Make it secure.</Form.Text>
               </Form.Group>
             </Form>
           </ModalBody>
@@ -171,7 +170,10 @@ class ProfilePage extends Component {
             <Button
               variant="primary"
               onClick={() => {
-                this.setState({ user: this.state.temp });
+                this.setState({
+                  user: this.state.temp,
+                  toggle: !this.state.toggle.edit
+                });
               }}
             >
               Submit
@@ -192,62 +194,6 @@ class ProfilePage extends Component {
   render() {
     return (
       <div>
-        <Navbar bg="light" expand="lg">
-          {/* If Logo on top left is clicked, redirect to home page */}
-          <Navbar.Brand href="/posts">
-            <Image src="./img/icon.jpg" width="50" height="50" />
-          </Navbar.Brand>
-          <Navbar.Brand href="#home">Spartan Forums</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home"></Nav.Link>
-
-              <Nav.Link href="/add-post">
-                <Image src="./img/new_post.png" width="30" height="30" />
-              </Nav.Link>
-
-              <Nav.Link href="#inbox">
-                <Image src="./img/mail.jpg" width="30" height="32" />
-                <Badge pill variant="danger" class="iconBadge">
-                  2{/* put in lower right  and resize */}
-                </Badge>
-              </Nav.Link>
-            </Nav>
-            <Col md={{ span: 6 }}>
-              <Form inline>
-                <FormControl
-                  type="text"
-                  placeholder="Search"
-                  className="mr-sm-2 mr-lg-1"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
-            </Col>
-
-            {/* Adds the profile icon top right */}
-            <div class="">
-              <Dropdown alignRight>
-                <Dropdown.Toggle variant="light">
-                  <Image
-                    src="./img/b man.png"
-                    width="30"
-                    height="30"
-                    thumbnail
-                  />
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Settings </Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href="#/action-3">
-                    <p class="text-danger">Sign Out</p>
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div>
-          </Navbar.Collapse>
-        </Navbar>
         {/* Profile Card */}
         {/* <div className="profile-card"> */}
         <div className="wrapper">
@@ -279,17 +225,20 @@ class ProfilePage extends Component {
               <Col>{this.EditModalButton}</Col>
             </div> */}
 
-            <Row>
-              {/* <Col md={{ span: 2 }}></Col> */}
-              <div className="margin">
-                <Col>{this.EditModalButton()}</Col>
-              </div>
-              <div className="margin">
-                <Col>{this.BlockModalButton()}</Col>
-              </div>
-            </Row>
-            {/* </ul> */}
-            {/* </div> */}
+            {/* <Row> */}
+            {/* <div className="marginButton"> */}
+            <div className="margin-bottom"></div>
+            <div className="profileButtons-mlbutton">
+              {this.EditModalButton()}
+            </div>
+            <div className="profileButtons-mrbutton">
+              {this.BlockModalButton()}
+              {/* <div className="margin"></div> */}
+              {/* <div className="margin"></div> */}
+              {/* </div> */}
+              {/* </Row> */}
+              {/* </ul> */}
+            </div>
           </div>
         </div>
       </div>

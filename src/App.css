@@ -13,7 +13,7 @@ light green: #A3C4BC
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .form-wrapper {
@@ -24,6 +24,20 @@ light green: #A3C4BC
   border-radius: 10px;
   box-shadow: 0px 10px 50px #555;
   background-color: #ffffff;
+  position: relative;
+  top: -40px;
+}
+
+.createAccount-form-wrapper {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #555;
+  background-color: #ffffff;
+  position: relative;
+  top: -10px;
 }
 
 .welcome-form-wrapper {
@@ -227,7 +241,39 @@ input.error {
   margin-bottom: 0.25em;
 }
 
+.withGoogle {
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .signIn small {
   color: #999;
   font-weight: lighter;
+}
+
+.postPage-wrapper {
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.postPage-form-wrapper {
+  width: 600px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px rgb(209, 203, 203);
+  background-color: #ffffff;
+  position: relative;
+  top: 10px;
 }

@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
+import firebase from "firebase";
+import config from "./containers/App/firebase-config";
+import { Redirect } from "react-router";
+
 import {
   Navbar,
   Nav,
@@ -37,12 +41,13 @@ const formValid = ({ formErrors, ...rest }) => {
 class CreateAccount extends Component {
   constructor(props) {
     super(props);
+    this.signUp = this.signUp.bind(this);
 
     this.state = {
       firstName: null,
       lastName: null,
-      email: null,
-      password: null,
+      email: "",
+      password: "",
       studentID: null,
       formErrors: {
         firstName: "",
@@ -52,6 +57,17 @@ class CreateAccount extends Component {
         studentID: ""
       }
     };
+  }
+
+  signUp(e) {
+    e.preventDefault();
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(this.state.email, this.state.password)
+      .then(u => {})
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   handleSubmit = e => {
@@ -102,6 +118,7 @@ class CreateAccount extends Component {
     }
 
     this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {
@@ -109,7 +126,7 @@ class CreateAccount extends Component {
 
     return (
       <div className="wrapper">
-        <div className="form-wrapper">
+        <div className="createAccount-form-wrapper">
           <h1>Create Account</h1>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
@@ -184,8 +201,11 @@ class CreateAccount extends Component {
               )}
             </div>
             <div className="createAccount">
+              {/* <button type="submit" onClick={this.signUp}> */}
               <button type="submit">
-                <Nav.Link href="/link-here">Create Account</Nav.Link>
+                <Nav.Link href="/posts">
+                  <custom>Create Account</custom>
+                </Nav.Link>
               </button>
               <Nav.Link href="/login">
                 <small>Already Have an Account?</small>
