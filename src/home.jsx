@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Routes from "./routes";
 import { browserHistory } from "react-router";
 import "./main.css";
+import firebase from "firebase";
 import {
   Navbar,
   Nav,
@@ -25,6 +26,9 @@ import {
   Input
 } from "reactstrap";
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+  }
   state = {};
 
   render() {
@@ -45,7 +49,7 @@ class HomePage extends Component {
                 <Image src="./img/new_post.png" width="30" height="30" />
               </Nav.Link>
 
-              <Nav.Link href="#inbox">
+              <Nav.Link href="/messaging">
                 <Image src="./img/mail.jpg" width="30" height="32" />
                 <Badge pill variant="danger" class="iconBadge">
                   2{/* put in lower right  and resize */}
@@ -79,7 +83,10 @@ class HomePage extends Component {
                   <Dropdown.Item href="/profile">Profile</Dropdown.Item>
                   <Dropdown.Item href="/settings">Settings </Dropdown.Item>
                   <Dropdown.Divider />
-                  <Dropdown.Item href="">
+                  <Dropdown.Item
+                    href=""
+                    onClick={() => firebase.auth().signOut()}
+                  >
                     <p class="text-danger">Sign Out</p>
                   </Dropdown.Item>
                 </Dropdown.Menu>

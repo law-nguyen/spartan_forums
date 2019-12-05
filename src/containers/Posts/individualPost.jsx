@@ -40,6 +40,7 @@ class Post extends Component {
                   <Container>
                     <Row>
                       <Col>
+                        {/* This gets the title content of the post */}
                         <h1>{posts[this.props.params.postId].title}</h1>
                         <Row>
                           <Col>Posted by:</Col>
@@ -52,6 +53,7 @@ class Post extends Component {
                       <Col> Category: School</Col>
                     </Row>
                     <div class="postBody">
+                      {/* This gets the body content of the post */}
                       {posts[this.props.params.postId].body}
                     </div>
                     <div class="postFooter">
@@ -74,6 +76,7 @@ class Post extends Component {
                                      value={this.state.comment}
                               */
                         />
+
                         {/*     
                                 Put onClick={this.handleSubmit} after the "submit" later
                            */}

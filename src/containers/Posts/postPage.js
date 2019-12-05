@@ -53,9 +53,7 @@ class Posts extends Component {
                 <h2>
                   <BrowserRouter>
                     {/* When clicked on a post, link them to that specific post */}
-                    <Link to={`/view/posts/${key}`}>
-                      Title: {posts[key].title}
-                    </Link>
+                    <Link to={`/view/posts/${key}`}>{posts[key].title}</Link>
                   </BrowserRouter>
                 </h2>
 
