@@ -167,16 +167,18 @@ class SignInPage extends Component {
             </div>
             <div className="signIn">
               {/* <button type="submit" onClick={this.login}> */}
-              <button type="submit">
+              <button>
                 <Nav.Link href="/posts">
                   <custom>Log In</custom>
                 </Nav.Link>
               </button>
+              {/* <div className="margin-top"> */}
               <Nav.Link href="/retrieval">
                 <small>
                   <u>Forgot your username/password?</u>
                 </small>
               </Nav.Link>
+              {/* </div> */}
             </div>
             <div className="withGoogle">
               <App />
