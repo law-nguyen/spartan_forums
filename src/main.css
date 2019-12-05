@@ -13,3 +13,315 @@
   outline-color: lightseagreen;
   background-color: lightskyblue;
 }
+
+.yellow-square {
+  background-color: #ffdc00;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.top-padding {
+  height: 10px;
+}
+
+.profile-card {
+  border: 1px solid grey;
+  margin: 20px;
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+.profile-buttons-padding {
+  margin-bottom: 10px;
+}
+
+.image-padding {
+  height: 3px;
+}
+
+.mt-n1 {
+  margin-top: -0.25rem !important;
+}
+
+.dropdown {
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.icon-login-square {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.box {
+  border: 1px solid black;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.form-wrapper {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #555;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: bolder;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: bolder;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h5 {
+  text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: lighter;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.profileButtons {
+  margin-left: 150px;
+  margin-right: 150px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editButton {
+  background-color: #fdbf5c;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.blockButton {
+  background-color: #fdbf5c;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.margin {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.searchButton {
+}
+.searchButton:hover {
+  color: #fdbf5c;
+  background-color: #fff;
+  border: 2px solid #fdbf5c;
+}
+
+.indi-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.indi-form-wrapper {
+  height: 82%;
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #555;
+  background-color: #ffffff;
+  position: relative;
+  margin-bottom: 10px;
+  top: -5%;
+}
+
+.margin-left {
+  margin-left: 15px;
+  margin-right: auto;
+  /* margin-bottom: 15px; */
+}
+
+.margin-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.profileButtons-mlbutton {
+  margin-left: 15%;
+  margin-right: auto;
+  margin-bottom: -20%;
+}
+
+.profileButtons-mrbutton {
+  margin-left: auto;
+  margin-right: 30%;
+  /* margin-bottom: -12%; */
+}
+
+.profileButtons-mrbutton button {
+  background-color: #fdbf5c;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 200%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.profileButtons-mrbutton custom,
+.profileButtons-mlbutton custom,
+.marginButtonIndiPost custom,
+.marginButton custom {
+  color: black;
+}
+.profileButtons-mlbutton button {
+  background-color: #fdbf5c;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 250%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.marginButton {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.marginButton button {
+  background-color: #fdbf5c;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 30%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.marginButton button:hover {
+  color: #fdbf5c;
+  background-color: #fff;
+  border: 2px solid #44413c;
+}
+
+.marginButtonIndiPost {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 5%;
+}
+
+.marginButtonIndiPost button {
+  background-color: #faad31;
+  border: 2px solid white;
+  width: 25%;
+  margin-top: 1em;
+  font-size: 1em;
+  font-weight: light;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+  /* margin-bottom: 100px; */
+}
+
+.marginButtonIndiPost button:hover {
+  color: #000000;
+  background-color: #fdbf5c;
+  border: 2px solid #fdbf5c;
+}
+
+.post-comment {
+  margin-left: auto;
+  margin-right: 5%;
+  /* margin-bottom: -%; */
+}
+
+.post-comment button {
+  background-color: #faad31;
+  border: 2px solid white;
+  width: 120%;
+  margin-top: -3%;
+  font-size: 1em;
+  font-weight: light;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.post-comment button:hover {
+  color: #000000;
+  background-color: #fdbf5c;
+  border: 2px solid #fdbf5c;
+}

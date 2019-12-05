@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 import config from "./firebase-config";
+import HomePage from "../../home";
+import SignInPage from "../../SignIn";
 
 class App extends Component {
   constructor() {
@@ -12,8 +14,26 @@ class App extends Component {
 
   state = {
     posts: [],
+    user: {},
     loading: true
   };
+
+  authListener() {
+    firebase.auth().onAuthStateChanged(user => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem("user", user.uid);
+      } else {
+        this.setState({ user });
+        localStorage.removeItem("user");
+      }
+    });
+  }
+
+  componentDidMount() {
+    this.authListener();
+  }
 
   componentWillMount() {
     let postsRef = firebase.database().ref("/posts");
@@ -39,6 +59,8 @@ class App extends Component {
             postswithcomments: this.state.postswithcomments,
             loading: this.state.loading
           })}
+        {/* Checks to see if user is logged in. If they are, push them to homepage. If not, push them back to login screen */}
+        {/* {this.state.user ? <HomePage /> : <SignInPage />} */}
       </div>
     );
   }

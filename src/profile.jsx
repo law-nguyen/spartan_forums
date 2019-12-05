@@ -83,7 +83,7 @@ class ProfilePage extends Component {
               this.setState({ toggle: { block: true } });
             }}
           >
-            Block
+            <custom>Block</custom>
           </Button>
         </div>
         <Modal isOpen={this.state.toggle.block}>
@@ -115,17 +115,17 @@ class ProfilePage extends Component {
       <div>
         <div>
           <Button
-            variant="primary"
+            type="danger"
             onClick={() => {
               this.setState({ toggle: { edit: true } });
             }}
           >
-            Edit
+            <custom>Edit</custom>
           </Button>
         </div>
 
         <Modal isOpen={this.state.toggle.edit}>
-          <ModalHeader>Modal title</ModalHeader>
+          <ModalHeader>Edit Existing Information About You</ModalHeader>
           <ModalBody>
             <Form>
               <Form.Group controlId="formBasicName">
@@ -151,19 +151,18 @@ class ProfilePage extends Component {
                     this.change(event, "major");
                   }}
                 />
-                <Form.Text className="text-muted">what is your major</Form.Text>
+                <Form.Text className="text-muted">What's your major?</Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+              <Form.Group controlId="formBasicName">
+                <Form.Label>Interests</Form.Label>
                 <Form.Control
-                  type="password"
-                  placeholder="Password"
+                  type="interests"
+                  placeholder="What do you like?"
                   onChange={event => {
-                    this.change(event, "password");
+                    this.change(event, "interests");
                   }}
                 />
-                <Form.Text className="text-muted">Make it secure.</Form.Text>
               </Form.Group>
             </Form>
           </ModalBody>
@@ -171,7 +170,10 @@ class ProfilePage extends Component {
             <Button
               variant="primary"
               onClick={() => {
-                this.setState({ user: this.state.temp });
+                this.setState({
+                  user: this.state.temp,
+                  toggle: !this.state.toggle.edit
+                });
               }}
             >
               Submit
@@ -192,79 +194,51 @@ class ProfilePage extends Component {
   render() {
     return (
       <div>
-        <Navbar bg="light" expand="lg">
-          {/* If Logo on top left is clicked, redirect to home page */}
-          <Navbar.Brand href="/posts">
-            <Image src="./img/icon.jpg" width="50" height="50" />
-          </Navbar.Brand>
-          <Navbar.Brand href="#home">Spartan Forums</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home"></Nav.Link>
-
-              <Nav.Link href="/add-post">
-                <Image src="./img/new_post.png" width="30" height="30" />
-              </Nav.Link>
-
-              <Nav.Link href="#inbox">
-                <Image src="./img/mail.jpg" width="30" height="32" />
-                <Badge pill variant="danger" class="iconBadge">
-                  2{/* put in lower right  and resize */}
-                </Badge>
-              </Nav.Link>
-            </Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-
-            {/* Adds the profile icon top right */}
-            <div class="">
-              <Dropdown alignRight>
-                <Dropdown.Toggle variant="light">
-                  <Image
-                    src="./img/b man.png"
-                    width="30"
-                    height="30"
-                    thumbnail
-                  />
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Settings </Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href="#/action-3">
-                    <p class="text-danger">Sign Out</p>
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+        {/* Profile Card */}
+        {/* <div className="profile-card"> */}
+        <div className="wrapper">
+          <div className="form-wrapper">
+            <div className="margin">
+              <h2>User Profile</h2>
             </div>
-          </Navbar.Collapse>
-        </Navbar>
-        <div>
-          <h2>User Profile</h2>
-          <div className="center">
-            <ul className="profileInfo">
+            {/* <div className="center"> */}
+            {/* <ul className="profileInfo"> */}
+            <div className="margin">
               <Container>
-                <Image src="./public/img/unknown.png" roundedCircle />
+                <Image
+                  src="./img/b man.png"
+                  roundedCircle
+                  width="90px"
+                  height="110px"
+                />
               </Container>
-              <Badge pill variant="primary">
-                {this.state.user.membership}
-              </Badge>
-              <h3>{this.state.user.name}</h3>
-              <h5>Major: {this.state.user.major}</h5>
-              <h5>Interests: {this.state.user.interests}</h5>
+            </div>
 
-              <Row>
-                <Col>{this.EditModalButton()}</Col>
-                <Col>{this.BlockModalButton()}</Col>
-              </Row>
-            </ul>
+            <Badge pill variant="primary">
+              {this.state.user.membership}
+            </Badge>
+            <h3>{this.state.user.name}</h3>
+            <h5>Major: {this.state.user.major}</h5>
+            <h5>Interests: {this.state.user.interests}</h5>
+
+            {/* <div className="profileButtons">
+              <Col>{this.EditModalButton}</Col>
+            </div> */}
+
+            {/* <Row> */}
+            {/* <div className="marginButton"> */}
+            <div className="margin-bottom"></div>
+            <div className="profileButtons-mlbutton">
+              {this.EditModalButton()}
+            </div>
+            <div className="profileButtons-mrbutton">
+              {this.BlockModalButton()}
+              {/* <div className="margin"></div> */}
+              {/* <div className="margin"></div> */}
+              {/* </div> */}
+              {/* </Row> */}
+              {/* </ul> */}
+            </div>
           </div>
         </div>
       </div>

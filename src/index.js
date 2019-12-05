@@ -8,6 +8,9 @@ import AddPost from "./containers/AddPost/addPost";
 import SignIn from "./containers/SignIn/signIn";
 import Post from "./containers/Posts/individualPost";
 import ProfilePage from "./profile";
+import CreateAccount from "./CreateAccount";
+import WelcomePage from "./Welcome";
+import SignInPage from "./SignIn";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
