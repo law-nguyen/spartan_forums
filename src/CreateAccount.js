@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import firebase from "firebase";
+import config from "./containers/App/firebase-config";
+import { Redirect } from "react-router";
 
 import {
   Navbar,
@@ -44,8 +46,8 @@ class CreateAccount extends Component {
     this.state = {
       firstName: null,
       lastName: null,
-      email: null,
-      password: null,
+      email: "",
+      password: "",
       studentID: null,
       formErrors: {
         firstName: "",
@@ -199,8 +201,8 @@ class CreateAccount extends Component {
               )}
             </div>
             <div className="createAccount">
-              <button type="submit">
-                <Nav.Link href="/posts">Create Account</Nav.Link>
+              <button type="submit" a href="/posts" onClick={this.signUp}>
+                <custom>Create Account</custom>
               </button>
               <Nav.Link href="/login">
                 <small>Already Have an Account?</small>

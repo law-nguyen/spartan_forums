@@ -93,7 +93,7 @@ class AddPost extends Component {
 
           {/*When user clicks on back to post button, redirect them to home site*/}
           <div className="addPostSubmit">
-            <button type="submit">
+            <button type="submit" onClick={this.handleSubmit}>
               <Nav.Link href="/posts">
                 <custom>Submit</custom>
               </Nav.Link>

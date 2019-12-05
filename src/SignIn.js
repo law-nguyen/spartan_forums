@@ -66,28 +66,9 @@ class SignInPage extends Component {
         password: "",
         major: "",
         graduatingYear: "",
-        studentID: "",
-
-        user: {}
+        studentID: ""
       }
     };
-  }
-
-  componentDidMount() {
-    this.authListener();
-  }
-
-  authListener() {
-    firebase.auth().onAuthStateChanged(user => {
-      console.log(user);
-      if (user) {
-        this.setState({ user });
-        localStorage.setItem("user", user.uid);
-      } else {
-        this.setState({ user });
-        localStorage.removeItem("user");
-      }
-    });
   }
 
   login(e) {
@@ -153,13 +134,6 @@ class SignInPage extends Component {
           <div className="signin-text-margin">
             <h3>Sign In</h3>
           </div>
-
-          {/* <div className="App">
-            Checks to see if user is logged in. If they are, push them to
-            homepage. If not, push them back to login screen *
-            {this.state.user ? <HomePage /> : <SignInPage />}
-          </div> */}
-
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="email">
               <label htmlFor="email">Email</label>
@@ -192,7 +166,7 @@ class SignInPage extends Component {
               )}
             </div>
             <div className="signIn">
-              <button type="submit">
+              <button type="submit" onClick={this.login}>
                 <Nav.Link href="/posts">
                   <custom>Log In</custom>
                 </Nav.Link>
