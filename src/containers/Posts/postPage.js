@@ -57,30 +57,30 @@ class Posts extends Component {
                   </BrowserRouter>
                 </h2>
 
-                <div>Votes: {posts[key].upvote}</div>
+                <div className="margin">Votes: {posts[key].upvote}</div>
                 {/* <div>Body: {posts[key].body}</div> */}
 
-                <div>
+                <div className="marginButton">
                   <Button
                     className="m-2"
                     variant="light"
                     onClick={_this.handleUpvote.bind(this, posts[key], key)}
                   >
-                    Upvote
+                    <custom>Upvote</custom>
                   </Button>
                   <Button
                     className="m-2"
                     variant="light"
                     onClick={_this.handleDownvote.bind(this, posts[key], key)}
                   >
-                    Downvote
+                    <custom>Downvote</custom>
                   </Button>
                   <Button
                     className="m-2"
                     variant="outline-danger"
                     onClick={_this.handleDeletePost.bind(this, posts[key], key)}
                   >
-                    Delete Post
+                    <custom>Delete Post</custom>
                   </Button>
                 </div>
               </div>

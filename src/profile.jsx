@@ -83,7 +83,7 @@ class ProfilePage extends Component {
               this.setState({ toggle: { block: true } });
             }}
           >
-            Block
+            <custom>Block</custom>
           </Button>
         </div>
         <Modal isOpen={this.state.toggle.block}>
@@ -120,7 +120,7 @@ class ProfilePage extends Component {
               this.setState({ toggle: { edit: true } });
             }}
           >
-            Edit
+            <custom>Edit</custom>
           </Button>
         </div>
 
@@ -171,7 +171,10 @@ class ProfilePage extends Component {
             <Button
               variant="primary"
               onClick={() => {
-                this.setState({ user: this.state.temp });
+                this.setState({
+                  user: this.state.temp,
+                  toggle: !this.state.toggle.edit
+                });
               }}
             >
               Submit
@@ -223,17 +226,20 @@ class ProfilePage extends Component {
               <Col>{this.EditModalButton}</Col>
             </div> */}
 
-            <Row>
-              {/* <Col md={{ span: 2 }}></Col> */}
-              <div className="margin">
-                <Col>{this.EditModalButton()}</Col>
-              </div>
-              <div className="margin">
-                <Col>{this.BlockModalButton()}</Col>
-              </div>
-            </Row>
-            {/* </ul> */}
-            {/* </div> */}
+            {/* <Row> */}
+            {/* <div className="marginButton"> */}
+            <div className="margin-bottom"></div>
+            <div className="profileButtons-mlbutton">
+              {this.EditModalButton()}
+            </div>
+            <div className="profileButtons-mrbutton">
+              {this.BlockModalButton()}
+              {/* <div className="margin"></div> */}
+              {/* <div className="margin"></div> */}
+              {/* </div> */}
+              {/* </Row> */}
+              {/* </ul> */}
+            </div>
           </div>
         </div>
       </div>

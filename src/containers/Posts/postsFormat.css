@@ -8,8 +8,18 @@
 /* background-color: rgb(255, 255, 255); */
 /* } */
 
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
 .form-wrapper {
-  width: 300px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   padding: 20px 40px;
@@ -39,6 +49,11 @@
 
 .postFooter {
   margin-bottom: 10px;
+}
+.post-comment-button {
+  width: 20%;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .h2 {
