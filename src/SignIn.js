@@ -173,12 +173,11 @@ class SignInPage extends Component {
                 </Nav.Link>
               </button>
               {/* <div className="margin-top"> */}
-              <Nav.Link href="/retrieval">
+              <Nav.Link href="/create-account">
                 <small>
-                  <u>Forgot your username/password?</u>
+                  <u>Create a new account</u>
                 </small>
               </Nav.Link>
-              {/* </div> */}
             </div>
             <div className="withGoogle">
               <App />
